@@ -20,14 +20,11 @@
 
 title: Projet 3
 description: >- # this means to ignore newlines until "baseurl:"
-  Projet Final de formation AJC - Consultant Réseaux. 
-  Groupe : Tayana / Sandrine / Maxime / Cyril
+  Projet Final de formation AJC Consultant Réseaux. 
+  Groupe : Tayana/Sandrine/Maxime/Cyril
 baseurl: "/projet-three" # the subpath of your site, e.g. /blog !!! A adapter
 url: "https://reseau-2020.github.io" # the base hostname & protocol for your site, e.g. http://example.com !!! ne pas modifier
-github_username:  SanV74
-github_username:  tayanateles
-github_username:  MaximeGriffet
-github_username:  vansteenk
+github_username:  SanV74  tayanateles  MaximeGriffet  vansteenk
 
 # Build settings
 theme: minima
