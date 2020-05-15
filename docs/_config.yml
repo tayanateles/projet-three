@@ -22,7 +22,7 @@ title: Projet 3
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Groupe Tayana / Sandrine / Maxime / Cyril
-baseurl: "/projet3" # the subpath of your site, e.g. /blog !!! A adapter
+baseurl: "/projet-three" # the subpath of your site, e.g. /blog !!! A adapter
 url: "https://reseau-2020.github.io" # the base hostname & protocol for your site, e.g. http://example.com !!! ne pas modifier
 twitter_username: goffinet
 github_username:  goffinet
