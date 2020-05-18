@@ -7,7 +7,7 @@ categories: welcome
 
 ## Réalisations de la journée :
 
-- [ ] Introduction au projet
+- [x] Introduction au projet
   
   - Relecture & prise en main de l'énoncé
   
@@ -21,20 +21,20 @@ categories: welcome
     > Doit-on utiliser des DHCP Pool ?
     > La Vlan administrative est-elle nécessaire même si on utilise Ansible via un PC d'administration ?
 
-- [ ] Mise en place d'une topologie annotée et détaillée sur GNS3
+- [x] Mise en place d'une topologie annotée et détaillée sur GNS3
   
-  - Adressage IPv4 & IPv6
-  - ![Topologie](lien_vers_image)
-  - [Plan d'adressage](https://lien_vers_github)
+  - Adressage IPv4 : Plan d'adressage
+  - ![Topologie](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG)
+  
 
-- [ ] Création d'un Scrum (GitHub Project) et d'un Gantt
+- [x] Création d'un Scrum (GitHub Project) et d'un Gantt
   
-  - [Gantt](https://lien_vers_impEcran_ou_appli_cloud)
+  - [Gantt](https://github.com/reseau-2020/projet-three/blob/master/Gantt%20projet%203.xlsx)
   
   - [Scrum](https://github.com/reseau-2020/projet-three/projects/1)
   
-  - [ ] Réflexion et choix des différentes technologies possibles
+- [ ] Début de Réflexion sur le choix des différentes technologies possibles
   
-  - Routage dynamique
-  
+  - Routage dynamique EIGRP/OSPF
   - Tableau Atouts/Inconvénients
+  
