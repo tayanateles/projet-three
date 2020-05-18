@@ -24,17 +24,15 @@ categories: welcome
 - [x] Mise en place d'une topologie annotée et détaillée sur GNS3
   
   - Adressage IPv4 : Plan d'adressage
-  - ![Topologie](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG)
-  
+  - [Topologie](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG)
 
 - [x] Création d'un Scrum (GitHub Project) et d'un Gantt
   
   - [Gantt](https://github.com/reseau-2020/projet-three/blob/master/Gantt%20projet%203.xlsx)
   
   - [Scrum](https://github.com/reseau-2020/projet-three/projects/1)
-  
+
 - [ ] Début de Réflexion sur le choix des différentes technologies possibles
   
   - Routage dynamique EIGRP/OSPF
   - Tableau Atouts/Inconvénients
-  
