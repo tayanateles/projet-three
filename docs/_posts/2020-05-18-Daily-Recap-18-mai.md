@@ -36,3 +36,14 @@ categories: welcome
   
   - Routage dynamique EIGRP/OSPF
   - Tableau Atouts/Inconvénients
+  
+## Programme du 19.05
+
+- Création du tableau d'adressage IPv4
+- Validation du plan d'adressage IPv4
+- Tests Ansible
+- Adaptation des fichiers yml à notre topologie
+- Lancer la configuration via Ansible
+- Création du tableau d'adressage IPv6
+- Validation du plan d'adressage IPv6
+
