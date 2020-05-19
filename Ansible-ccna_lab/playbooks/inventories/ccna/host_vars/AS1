@@ -6,7 +6,7 @@ group_channels:
     interfaces:
       - GigabitEthernet0/0
       - GigabitEthernet1/0
-  - id: 2
+  - id: 22
     mode: active
     interfaces:
       - GigabitEthernet0/1
