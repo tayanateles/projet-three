@@ -65,7 +65,7 @@ interfaces:
       native: 99
   - id: Vlan99
     description: "Management real gateway"
-    ipv4_address: 172.16.0.253/24
+    ipv4_address: 10.192.1.254/24
     passive:
     rip:
     eigrp4:
@@ -80,7 +80,7 @@ interfaces:
       pri: 255
   - id: Vlan10
     description: "Vlan10 real gateway"
-    ipv4_address: 10.192.10.252/24
+    ipv4_address: 10.192.10.254/24
     passive:
     rip:
     eigrp4:
@@ -98,7 +98,7 @@ interfaces:
       pri: 255
   - id: Vlan20
     description: "Vlan20 real gateway"
-    ipv4_address: 10.192.20.252/24
+    ipv4_address: 10.192.20.254/24
     passive:
     rip:
     eigrp4:
@@ -116,7 +116,7 @@ interfaces:
       pri: 255
   - id: Vlan30
     description: "Vlan30 real gateway"
-    ipv4_address: 10.192.30.252/24
+    ipv4_address: 10.192.30.254/24
     passive:
     rip:
     eigrp4:
@@ -134,7 +134,7 @@ interfaces:
       pri: 255
   - id: Vlan40
     description: "Vlan40 real gateway"
-    ipv4_address: 10.192.40.252/24
+    ipv4_address: 10.192.40.254/24
     passive:
     rip:
     eigrp4:
