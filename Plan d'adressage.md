@@ -3,13 +3,13 @@
 |---|-----|-----|----|----|
 R1 | Gi0/0 | connected to SW-R1 on port Ethernet0 | 10.32.1.1 | fe80::1:cafe:4 ; 2001:470:c814:4001::/64 ; fd00:fd00:fd00:1::1/64
 R1 | Gi0/1 | connected to Provider on port Ethernet0 | 10.32.4.1 | fe80::1:cafe:4
-R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.32.2.1 | fe80::1:cafe:4
-R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.32.3.1 | fe80::1:cafe:4
+R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | fe80::1:cafe:4
+R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 | fe80::1:cafe:4
 R1 | Gi0/7 | connected to SW-CTRL on port Ethernet1 | 10.32.5.1 | fe80::1:cafe:4
 R2 | Gi0/0 | connected to SW-R2 on port Ethernet0 | 10.32.1.2 | fe80::cafe:4 ; 2001:470:c814:4002::/64 ; fd00:fd00:fd00:2::1/64
 R2 | Gi0/1 | connected to R1 on port Gi0/2 | 10.32.2.2 | fe80::2:cafe:4
 R2 | Gi0/2 | connected to DS1 on port Gi2/0 | 10.16.1.2 | fe80::2:cafe:4
-R2 | Gi0/3 | connected to R3 on port Gi0/2 | 10.32.3.2 | fe80::2:cafe:4
+R2 | Gi0/3 | connected to R3 on port Gi0/2 | 10.1.3.0 | fe80::2:cafe:4
 R2 | Gi0/4 | connected to DS1 on port Gi3/0 | 10.16.2.2 | fe80::2:cafe:4
 R2 | Gi0/5 | connected to DS2 on port Gi2/1 | 10.16.3.2 | fe80::2:cafe:4
 R2 | Gi0/6 | connected to DS2 on port Gi3/1 | 10.16.4.2 | fe80::2:cafe:4
