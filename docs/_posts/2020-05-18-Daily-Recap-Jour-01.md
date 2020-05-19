@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Daily Recap du 18.05"
+title:  "Daily Recap JOUR 01"
 date:   2020-05-18
 categories: welcome
 ---
@@ -36,7 +36,7 @@ categories: welcome
   
   - Routage dynamique EIGRP/OSPF
   - Tableau Atouts/Inconvénients
-  
+
 ## Programme du 19.05
 
 - Création du tableau d'adressage IPv4
@@ -46,4 +46,3 @@ categories: welcome
 - Lancer la configuration via Ansible
 - Création du tableau d'adressage IPv6
 - Validation du plan d'adressage IPv6
-
