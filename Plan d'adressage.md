@@ -15,13 +15,21 @@ R3 | Gi0/3 | connected to DS2 on port Gi2/0 | 10.3.1.3 |
 R3 | Gi0/4 | connected to DS2 on port Gi3/0 | 10.3.2.3 | 
 R3 | Gi0/5 | connected to DS1 on port Gi2/1 | 10.3.3.3 | 
 R3 | Gi0/6 | connected to DS1 on port Gi3/1 | 10.3.4.3 | 
+DS1 | Gi2/0 | connected to R2 on port Gi0/2 | 10.2.1.1 | 
+DS1 | Gi3/0 | connected to R2 on port Gi0/4 | 10.2.2.1 | 
+DS1 | Gi2/1 | connected to R3 on port Gi0/5 | 10.2.3.1 | 
+DS1 | Gi3/1 | connected to R3 on port Gi0/6 | 10.2.4.1 | 
+DS2 | Gi2/1 | connected to R2 on port Gi0/5 | 10.3.3.2 | 
+DS2 | Gi3/1 | connected to R2 on port Gi0/6 | 10.3.4.2 | 
+DS2 | Gi2/0 | connected to R3 on port Gi0/3 | 10.3.1.2 | 
+DS2 | Gi3/0 | connected to R3 on port Gi0/4 | 10.3.2.2 | 
 
 # VLANS
 - vlan 10 : 10.192.10.0/24, ip default gateway 10.192.10.254
 - vlan 20 : 10.192.20.0/24, passerelle 10.192.20.254
 - vlan 30 : 10.192.30.0/24, passerelle 10.192.30.254
 - vlan 40 : 10.192.40.0/24, passerelle 10.192.40.254
-- vlan 99 : vlan natif, management (10.192.1.0/24, passerelle 10.192.1.254  ?)
+- vlan 99 : vlan natif, management (10.192.1.0/24, passerelle 10.192.1.254)
 
 | Périphérique  | PortChannel | Port Physique |  Infos
 |:---:|:-----:|:----:|:----:|
