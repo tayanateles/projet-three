@@ -24,7 +24,7 @@ categories: welcome
 - [x] Mise en place d'une topologie annotée et détaillée sur GNS3
   
   - Adressage IPv4 : Plan d'adressage
-  - [Topologie](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG)
+  - ![Topologie](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG?raw=true)
 
 - [x] Création d'un Scrum (GitHub Project) et d'un Gantt
   
