@@ -2,8 +2,8 @@
 hostname: R1
 interfaces:
   - id: GigabitEthernet0/0
-    description: "LAN R1"
-    ipv4_address: 192.168.1.1/24
+    description:"Internet connexion ip nat outside"
+    ipv4_address: dhcp
     passive:
     rip:
     eigrp4:
@@ -12,19 +12,19 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::1'
-      - 'FD00:FD00:FD00:1::1/64'
+      - ''
     eigrp6:
     ospfv3:
       area: 0
       cost: 1
       pri: 255
   - id: GigabitEthernet0/1
-    description: "Internet connexion ip nat outside"
-    ipv4_address: dhcp
+    description:
+    ipv4_address:
+    
   - id: GigabitEthernet0/2
     description: "Link to R2"
-    ipv4_address: 192.168.225.1/24
+    ipv4_address: 10.1.1.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -32,7 +32,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::1'
+      - ''
     eigrp6:
     ospfv3:
       area: 0
@@ -40,7 +40,7 @@ interfaces:
       pri: 255
   - id: GigabitEthernet0/3
     description: "Link to R3"
-    ipv4_address: 192.168.226.1/24
+    ipv4_address: 10.1.2.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -48,7 +48,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::1'
+      - ''
     eigrp6:
     ospfv3:
       area: 0
