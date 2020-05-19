@@ -66,7 +66,7 @@ interfaces:
       native: 99
   - id: Vlan99
     description: "Management real gateway"
-    ipv4_address: 10.192.1.254/24
+    ipv4_address: 10.192.1.252/24
     passive:
     rip:
     eigrp4:
@@ -81,7 +81,7 @@ interfaces:
       pri: 255
   - id: Vlan10
     description: "Vlan10 real gateway"
-    ipv4_address: 10.192.10.254/24
+    ipv4_address: 10.192.10.252/24
     passive:
     rip:
     eigrp4:
@@ -99,7 +99,7 @@ interfaces:
       pri: 255
   - id: Vlan20
     description: "Vlan20 real gateway"
-    ipv4_address: 10.192.20.254/24
+    ipv4_address: 10.192.20.252/24
     passive:
     rip:
     eigrp4:
@@ -117,7 +117,7 @@ interfaces:
       pri: 255
   - id: Vlan30
     description: "Vlan30 real gateway"
-    ipv4_address: 10.192.30.254/24
+    ipv4_address: 10.192.30.252/24
     passive:
     rip:
     eigrp4:
@@ -135,7 +135,7 @@ interfaces:
       pri: 255
   - id: Vlan40
     description: "Vlan40 real gateway"
-    ipv4_address: 10.192.40.254/24
+    ipv4_address: 10.192.40.252/24
     passive:
     rip:
     eigrp4:
@@ -219,21 +219,21 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-# - id: GigabitEthernet0/3
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet1/3
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet2/2
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet2/3
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet3/2
-#    description: "Stub interface"
-#    stub: true
+ - id: GigabitEthernet0/3
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet1/3
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet2/2
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet2/3
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet3/2
+    description: "Stub interface"
+    stub: true
 routing:
   rid: 4.4.4.4
   eigrp_as: 1
@@ -241,27 +241,27 @@ routing:
     - id: Vlan10
       group: 10
       protocol: ipv4
-      address: 10.192.10.252
+      address: 10.192.10.254
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan20
       group: 20
       protocol: ipv4
-      address: 10.192.20.252
+      address: 10.192.20.254
       preempt: false
       mode: standby
     - id: Vlan30
       group: 30
       protocol: ipv4
-      address: 10.192.30.252
+      address: 10.192.30.254
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan40
       group: 40
       protocol: ipv4
-      address: 10.192.40.252
+      address: 10.192.40.254
       preempt: false
       mode: standby
 #    - id: Vlan10
