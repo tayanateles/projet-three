@@ -33,27 +33,27 @@ interfaces:
     ipv4_address: 10.192.1.0/24
     gateway: 10.192.1.254
   - id: GigabitEthernet0/0
-    description: "Trunk Group Channel4 to DS2"
+    description: "Trunk Group Channel2 to DS2"
     trunk:
       native: 99
   - id: GigabitEthernet1/0
-    description: "Trunk Group Channel4 to DS2"
+    description: "Trunk Group Channel2 to DS2"
     trunk:
       native: 99
   - id: GigabitEthernet0/1
-    description: "Trunk Group Channel5 to DS1"
+    description: "Trunk Group Channel11 to DS1"
     trunk:
       native: 99
   - id: GigabitEthernet1/1
-    description: "Trunk Group Channel5 to DS1"
+    description: "Trunk Group Channel11 to DS1"
     trunk:
       native: 99
-  - id: Port-channel4
-    description: "Trunk Group Channel4 to DS2"
+  - id: Port-channel2
+    description: "Trunk Group Channel2 to DS2"
     trunk:
       native: 99
-  - id: Port-channel5
-    description: "Trunk Group Channel5 to DS1"
+  - id: Port-channel11
+    description: "Trunk Group Channel11 to DS1"
     trunk:
       native: 99
 #  - id: GigabitEthernet0/2
