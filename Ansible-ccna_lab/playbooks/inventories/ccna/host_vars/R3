@@ -102,10 +102,10 @@ interfaces:
 routing:
   rid: 3.3.3.3
   eigrp_as: 1
-dhcp:
-  dhcp_pool:
-    - id: "LANR3"
-      network: 192.168.65.0
-      netmask: 255.255.255.0
-      router: 192.168.65.1
-      dns: 192.168.65.1
+#dhcp:
+#  dhcp_pool:
+#    - id: "LANR3"
+#      network: 192.168.65.0
+#      netmask: 255.255.255.0
+#      router: 192.168.65.1
+#      dns: 192.168.65.1
