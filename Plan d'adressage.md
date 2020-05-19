@@ -21,7 +21,7 @@ R3 | Gi0/6 | connected to DS1 on port Gi3/1 | 10.3.4.3 |
 - vlan 20 : 10.192.20.0/24, passerelle 10.192.20.254
 - vlan 30 : 10.192.30.0/24, passerelle 10.192.30.254
 - vlan 40 : 10.192.40.0/24, passerelle 10.192.40.254
-- vlan 99 : vlan natif, management
+- vlan 99 : vlan natif, management (10.192.1.0/24, passerelle 10.192.1.254)
 
 | Périphérique  | PortChannel | Port Physique |  Infos
 |:---:|:-----:|:----:|:----:|
