@@ -19,27 +19,17 @@ R3 | Gi0/4 | connected to DS2 on port Gi3/0 | 10.3.2.3 |
 R3 | Gi0/5 | connected to DS1 on port Gi2/1 | 10.3.3.3 | 
 R3 | Gi0/6 | connected to DS1 on port Gi3/1 | 10.3.4.3 | 
 R3 | Gi0/7 | connected to SW-CTRL on port Ethernet3 |  | 
-DS1 | Gi0/0 | connected to AS1 on port Gi0/0 |  | 
-DS1 | Gi0/1 | connected to AS2 on port Gi0/1 |  | 
-DS1 | Gi0/2 | connected to DS2 on port Gi0/2 |  | 
-DS1 | Gi1/0 | connected to AS1 on port Gi1/0 |  | 
-DS1 | Gi1/1 | connected to AS2 on port Gi1/1 |  | 
-DS1 | Gi1/2 | connected to DS2 on port Gi1/2 |  | 
-DS1 | Gi2/0 | connected to R2 on port Gi0/2 |  | 
-DS1 | Gi2/1 | connected to R3 on port Gi0/5 |  | 
-DS1 | Gi3/0 | connected to R2 on port Gi0/4 |  | 
-DS1 | Gi3/1 | connected to R3 on port Gi0/6 |  | 
+
+DS1 | po1 | Gi0/0, Gi1/0 | Link to AS1 |
+DS1 | po11 | Gi0/1, Gi1/1| Link to AS2 |
+DS1 | po3 | | po3 |  | 
+
 DS1 | Gi3/3 | connected to SW-CTRL on port Ethernet4 |  | 
-DS2 | Gi0/0 | connected to AS2 on port Gi0/0 |  | 
-DS2 | Gi0/1 | connected to AS1 on port Gi0/1 |  | 
-DS2 | Gi0/2 | connected to DS1 on port Gi0/2 |  | 
-DS2 | Gi1/0 | connected to AS2 on port Gi1/0 |  | 
-DS2 | Gi1/1 | connected to AS1 on port Gi1/1 |  | 
-DS2 | Gi1/2 | connected to DS1 on port Gi1/2 |  | 
-DS2 | Gi2/0 | connected to R3 on port Gi0/3 |  | 
-DS2 | Gi2/1 | connected to R2 on port Gi0/5 |  | 
-DS2 | Gi3/0 | connected to R3 on port Gi0/4 |  | 
-DS2 | Gi3/1 | connected to R2 on port Gi0/6 |  | 
+DS2 | VLAN 10 | connected to AS1 on port Gi0/0 |  | 
+DS2 | VLAN 20 | connected to AS2 on port Gi0/1 |  | 
+DS2 | VLAN 30 | connected to DS2 on port Gi0/2 |  | 
+DS2 | VLAN 40 | connected to AS1 on port Gi1/0 |  | 
+DS2 | VLAN 99 | connected to AS2 on port Gi1/1 |  | 
 DS2 | Gi3/3 | connected to SW-CTRL on port Ethernet5 |  |  
 AS1  |  Gi0/0  |  connected to DS1 on port Gi0/0   |  | 
 AS1  |  Gi0/1  |  connected to DS2 on port Gi0/1   |  | 
