@@ -21,11 +21,11 @@ group_channels:
     interfaces:
       - GigabitEthernet0/2
       - GigabitEthernet1/2
-  - id: 4
+  - id: 22
     mode: active
     interfaces:
-      - GigabitEthernet0/0
-      - GigabitEthernet1/0
+      - GigabitEthernet0/1
+      - GigabitEthernet1/1
 interfaces:
   - id: GigabitEthernet0/0
     description: "Trunk Group Channel4 to AS2"
@@ -80,7 +80,7 @@ interfaces:
       pri: 255
   - id: Vlan10
     description: "Vlan10 real gateway"
-    ipv4_address: 172.16.10.253/24
+    ipv4_address: 10.192.10.252/24
     passive:
     rip:
     eigrp4:
@@ -88,9 +88,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
-      - 'FE80::D:3'
-      - 'FD00:1AB:1A3:10::2/64'
+#    ipv6_addresses:
+#      - 'FE80::D:3'
+#      - 'FD00:1AB:1A3:10::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -98,7 +98,7 @@ interfaces:
       pri: 255
   - id: Vlan20
     description: "Vlan20 real gateway"
-    ipv4_address: 172.16.20.253/24
+    ipv4_address: 10.192.20.252/24
     passive:
     rip:
     eigrp4:
@@ -106,9 +106,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
-      - 'FE80::D:3'
-      - 'FD00:1AB:1A3:20::2/64'
+#    ipv6_addresses:
+#     - 'FE80::D:3'
+#      - 'FD00:1AB:1A3:20::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -116,7 +116,7 @@ interfaces:
       pri: 255
   - id: Vlan30
     description: "Vlan30 real gateway"
-    ipv4_address: 172.16.30.253/24
+    ipv4_address: 10.192.30.252/24
     passive:
     rip:
     eigrp4:
@@ -124,9 +124,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
-      - 'FE80::D:3'
-      - 'FD00:1AB:1A3:30::2/64'
+#    ipv6_addresses:
+#      - 'FE80::D:3'
+#      - 'FD00:1AB:1A3:30::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -134,7 +134,7 @@ interfaces:
       pri: 255
   - id: Vlan40
     description: "Vlan40 real gateway"
-    ipv4_address: 172.16.40.253/24
+    ipv4_address: 10.192.40.252/24
     passive:
     rip:
     eigrp4:
@@ -142,9 +142,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
-      - 'FE80::D:3'
-      - 'FD00:1AB:1A3:40::2/64'
+#    ipv6_addresses:
+#      - 'FE80::D:3'
+#      - 'FD00:1AB:1A3:40::2/64'
     eigrp6:
     ospfv3:
       area: 0
