@@ -29,7 +29,7 @@ categories: welcome
 | Distance administrative 90 | Distance administrative 110
 
 
-  - [ ] Mise en place de la topologie Switchblock
+  - [x] Mise en place de la topologie Switchblock
     - configuration globale
     - création VLANs
     - configuration ports access/trunk
@@ -37,33 +37,37 @@ categories: welcome
     - configuration RTSP
     - configuration HSRP
     - configuration DHCP
-    - Diagnostique
+
   
 
-  - [ ] Mise en place de la topologie Tripod
+  - [x] Mise en place de la topologie Tripod
     - configuration Ipv4
     - configuration DHCP
     - configuration EIGRP
     - configuration NAT
  
   - Debrieffing
-  ```
-  La topogie fonctionne ? Problèmes recontrés ?
-  ```
+  
+> Nous avons rencontré un problème lors de la copie du fichier "Ansible-ccna_lab/roles". 
+> Il n'était pas cosidéré comme un lien mais  comme un fichier. 
+> Nous avons finalement reussi à résoudre ce problème avec la commande `ln -s` directement sur le Pc de contrôle centos. 
+> 
+> Par la suite, nous avons rencontré de nombreuses erreurs de syntaxe sur nos fichiers `hosts`.
+> Nous avons commencé à les résoudre.
+> **la topologie n'est pas fonctionnelle pour le moment.**
 
  - Update docs
-   - [ ] Update Scrum
-   - [ ] Update Blog
+   - [x] Update Scrum
+   - [x] Update Blog
    - [x] Update [Topologie.PNG](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG)
     
     
 ## Programme du 20.05.2020
  
- -
- -
- -
- -
- -
+ - Terminer la mise en route de la topologie sur Ipv4 en corrigeant les erreurs de syntaxes
+ - Diagnostiquer le bon fonctionnement de la topologie
+ - Réaliser un tableau d'adressage IPv6
+ - Commencer le lancement de la topologie en IPv6
  
  
   
