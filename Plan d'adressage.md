@@ -29,7 +29,7 @@ DS2 | Gi3/0 | connected to R3 on port Gi0/4 | 10.3.2.2 |
 - vlan 20 : 10.192.20.0/24, passerelle 10.192.20.254
 - vlan 30 : 10.192.30.0/24, passerelle 10.192.30.254
 - vlan 40 : 10.192.40.0/24, passerelle 10.192.40.254
-- vlan 99 : vlan natif, management (10.192.1.0/24, passerelle 10.192.1.254)
+- vlan 99 : vlan natif, management, passerelle 10.192.1.254)
 
 | Périphérique  | PortChannel | Port Physique |  Infos
 |:---:|:-----:|:----:|:----:|
