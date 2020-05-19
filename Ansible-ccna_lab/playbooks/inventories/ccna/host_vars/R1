@@ -12,16 +12,12 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - ''
+#      - 'fe80::cafe:3'
     eigrp6:
     ospfv3:
       area: 0
       cost: 1
       pri: 255
-  - id: GigabitEthernet0/1
-    description:
-    ipv4_address:
-    
   - id: GigabitEthernet0/2
     description: "Link to R2"
     ipv4_address: 10.1.1.1/24
@@ -32,7 +28,6 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - ''
     eigrp6:
     ospfv3:
       area: 0
@@ -48,7 +43,6 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - ''
     eigrp6:
     ospfv3:
       area: 0
@@ -57,13 +51,13 @@ interfaces:
 routing:
   rid: 1.1.1.1
   eigrp_as: 1
-nat:
-  name: "LANS"
-  inside:
-    - GigabitEthernet0/1
-    - GigabitEthernet0/2
-    - GigabitEthernet0/3
-  outside: GigabitEthernet0/0
-  sources:
-    - "192.168.0.0 0.0.255.255" ?
-    - "172.16.0.0 0.0.255.255" ?
+#nat:
+#  name: "LANS"
+#  inside:
+#    - GigabitEthernet0/1
+#    - GigabitEthernet0/2
+#    - GigabitEthernet0/3
+#  outside: GigabitEthernet0/0
+#  sources:
+#    - "192.168.0.0 0.0.255.255"
+#    - "172.16.0.0 0.0.255.255"
