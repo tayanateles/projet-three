@@ -6,8 +6,8 @@ ipv4:
     - eigrp
 #    - ospf
 ipv6:
-  enabled: yes
-  forwarding: yes
+  enabled: no
+  forwarding: no
   routing:
-    - eigrp
+#    - eigrp
 #    - ospf
