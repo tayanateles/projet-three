@@ -51,13 +51,14 @@ interfaces:
 routing:
   rid: 1.1.1.1
   eigrp_as: 1
-#nat:
-#  name: "LANS"
-#  inside:
-#    - GigabitEthernet0/1
-#    - GigabitEthernet0/2
-#    - GigabitEthernet0/3
-#  outside: GigabitEthernet0/0
-#  sources:
-#    - "192.168.0.0 0.0.255.255"
-#    - "172.16.0.0 0.0.255.255"
+nat:
+  name: "LANS"
+  inside:
+    - GigabitEthernet0/2
+    - GigabitEthernet0/3
+  outside: GigabitEthernet0/0
+  sources:
+    - "10.1.0.0 0.0.255.255"
+    - "10.2.0.0 0.0.255.255"
+    - "10.3.0.0 0.0.255.255"
+    - "10.192.0.0 0.0.255.255"
