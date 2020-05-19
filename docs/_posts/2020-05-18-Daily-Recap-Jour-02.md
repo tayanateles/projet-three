@@ -1,27 +1,31 @@
 ---
 layout: post
 title:  "Daily Recap JOUR 02"
-date:   2020-05-18
+date:   2020-05-19
 categories: welcome
 ---
-
-## Programme du 19.05
-
-- Création du tableau d'adressage IPv4
-- Validation du plan d'adressage IPv4
-- Tests Ansible
-- Adaptation des fichiers yml à notre topologie
-- Lancer la configuration via Ansible
-- Création du tableau d'adressage IPv6
-- Validation du plan d'adressage IPv6
 
 
 ## Réalisations de la journée :
 
 - Adressage Ipv4 et Ipv6 
-  - [ ] Tableau adresssage IPv4
+  - [x] Tableau adresssage IPv4
   - [ ] Tableau adresssage IPv6
-  - [ ] Validation
+  - [x] Validation IPv4
+  - [ ] Validation Ipv6
+
+- [x] Prise en main de Ansible
+
+- [x] Tableau comparatif OSPF/EIGRP
+
+| OSPF  | EIGRP          |
+|---|-----|
+| A état de liens | A vecteur de distance sans boucles 
+| Seulement IP | multi-protocoles
+| Il ne possède pas de route secondaire | Il possède une route secondaire
+| Utilise des aires pour limiter l'utilisation de la bande passante| Système autonome
+| Aucunes limite de sauts | Maximum 224 sauts 
+| Distance administrative 90 | Distance administrative 110
 
 - [ ] Mise en place de la topologie Switchblock
   - configuration globale
@@ -33,13 +37,25 @@ categories: welcome
   - configuration DHCP
   - Diagnostique
   
- - [ ] Mise en place de la topologie Tripod
-    - configuration Ipv4
-    - configuration DHCP
-    - configuration EIGRP
-    - configuration NAT
+- [ ] Mise en place de la topologie Tripod
+  - configuration Ipv4
+  - configuration DHCP
+  - configuration EIGRP
+  - configuration NAT
     
-  
+- Update docs
+  - [ ] Update Scrum
+  - [ ] Update Blog
+  - [x] Update [Topologie.PNG](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG)
+    
+    
+## Programme du 20.05.2020
+ 
+ -
+ -
+ -
+ -
+ -
  
  
   
