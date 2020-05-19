@@ -1,7 +1,6 @@
 # PLAN D'ADRESSAGE
 | Périphérique  |Interfaces  |Infos  | Adresse ipv4  |  Adresse ipv6
 |---|-----|-----|----|----|
-R1 | Gi0/0 | connected to SW-internet on port Ethernet0 |  | 
 R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | 
 R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 |  
 R2 | Gi0/1 | connected to R1 on port Gi0/2 | 10.1.1.2 | 
