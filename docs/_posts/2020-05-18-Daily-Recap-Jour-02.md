@@ -13,6 +13,7 @@ categories: welcome
   - [ ] Tableau adresssage IPv6
   - [x] Validation IPv4
   - [ ] Validation Ipv6
+ 
 
  - Prise en main de Ansible
 
@@ -27,7 +28,7 @@ categories: welcome
 | Aucunes limite de sauts | Maximum 224 sauts 
 | Distance administrative 90 | Distance administrative 110
 
- - Mise en place de la topologie en IPv4
+
   - [ ] Mise en place de la topologie Switchblock
     - configuration globale
     - création VLANs
@@ -38,12 +39,14 @@ categories: welcome
     - configuration DHCP
     - Diagnostique
   
+
   - [ ] Mise en place de la topologie Tripod
     - configuration Ipv4
     - configuration DHCP
     - configuration EIGRP
     - configuration NAT
-    
+ 
+
  - Update docs
    - [ ] Update Scrum
    - [ ] Update Blog
