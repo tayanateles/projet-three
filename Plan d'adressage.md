@@ -2,7 +2,6 @@
 | Périphérique  |Interfaces  |Infos  | Adresse ipv4  |  Adresse ipv6
 |---|-----|-----|----|----|
 R1 | **Gi0/0?** | connected to SW-internet on port Ethernet0 | 10.32.1.1 | fe80::1:cafe:4 ; 2001:470:c814:4001::/64 ; fd00:fd00:fd00:1::1/64
-R1 | Gi0/1 | connected to Provider on port Ethernet0 | 10.32.4.1 | fe80::1:cafe:4
 R1 | Gi0/2 | connected to R2 on port Gi0/1 | **10.1.1.1** | fe80::1:cafe:4
 R1 | Gi0/3 | connected to R3 on port Gi0/1 | **10.1.2.1** | fe80::1:cafe:4
 R1 | Gi0/7 | connected to SW-CTRL on port Ethernet1 | 10.32.5.1 | fe80::1:cafe:4
