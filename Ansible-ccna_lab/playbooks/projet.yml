@@ -1,5 +1,0 @@
----
-# ccna.yml
-# Playbook to configure CCNA "switchblock" and "tripod" topologies
-- import_playbook: switchblockPROJET.yml
-- import_playbook: tripodPROJET.yml
