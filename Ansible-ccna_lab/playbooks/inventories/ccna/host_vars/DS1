@@ -241,27 +241,27 @@ routing:
     - id: Vlan10
       group: 10
       protocol: ipv4
-      address: 10.192.10.254
+      address: 10.192.10.252
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan20
       group: 20
       protocol: ipv4
-      address: 10.192.20.254
+      address: 10.192.20.252
       preempt: false
       mode: standby
     - id: Vlan30
       group: 30
       protocol: ipv4
-      address: 10.192.30.254
+      address: 10.192.30.252
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan40
       group: 40
       protocol: ipv4
-      address: 10.192.40.254
+      address: 10.192.40.252
       preempt: false
       mode: standby
 #    - id: Vlan10
