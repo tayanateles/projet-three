@@ -1,12 +1,12 @@
 ---
 hostname: AS2
 group_channels:
-  - id: 4
+  - id: 2
     mode: active
     interfaces:
       - GigabitEthernet0/0
       - GigabitEthernet1/0
-  - id: 5
+  - id: 11
     mode: active
     interfaces:
       - GigabitEthernet0/1
