@@ -41,19 +41,19 @@ interfaces:
     trunk:
       native: 99
   - id: GigabitEthernet0/1
-    description: "Trunk Group Channel2 to DS2"
+    description: "Trunk Group Channel22 to DS2"
     trunk:
       native: 99
   - id: GigabitEthernet1/1
-    description: "Trunk Group Channel2 to DS2"
+    description: "Trunk Group Channel22 to DS2"
     trunk:
       native: 99
   - id: Port-channel1
     description: "Trunk Group Channel1 to DS1"
     trunk:
       native: 99
-  - id: Port-channel2
-    description: "Trunk Group Channel2 to DS2"
+  - id: Port-channel22
+    description: "Trunk Group Channel22 to DS2"
     trunk:
       native: 99
 #  - id: GigabitEthernet0/2
