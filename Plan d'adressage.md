@@ -3,8 +3,7 @@
 |---|-----|-----|----|----|
 R1 | Gi0/0 | connected to SW-internet on port Ethernet0 |  | 
 R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | 
-R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 | 
-R1 | Gi0/7 | connected to SW-CTRL on port Ethernet1 |  | 
+R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 |  
 R2 | Gi0/1 | connected to R1 on port Gi0/2 | 10.1.1.2 | 
 R2 | Gi0/2 | connected to DS1 on port Gi2/0 | 10.2.1.2 | 
 R2 | Gi0/3 | connected to R3 on port Gi0/2 | 10.1.3.2| 
@@ -42,5 +41,5 @@ DS1 | VLAN30 | Root Primary | 10.192.30.252/24 |
 DS1 | VLAN40 | Root Secondary | 10.192.40.252/24 | 
 DS2 | VLAN10 | Root Secondary | 10.192.10.253/24 | 
 DS2 | VLAN20 | Root Primary | 10.192.20.253/24 | 
-DS1 | VLAN30 | Root Secondary | 10.192.30.253/24 | 
+DS2 | VLAN30 | Root Secondary | 10.192.30.253/24 | 
 DS2 | VLAN40 | Root Primary | 10.192.40.253/24 | 
