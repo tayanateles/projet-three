@@ -1,6 +1,6 @@
 # PLAN D'ADRESSAGE
 | Périphérique  |Interfaces  |Infos  | Adresse ipv4  |  Adresse ipv6
-|---|-----|-----|----|----|
+|:---:|:-----:|:-----:|:----:|:----:|
 R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | 
 R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 |  
 R2 | Gi0/1 | connected to R1 on port Gi0/2 | 10.1.1.2 | 
@@ -24,7 +24,7 @@ R3 | Gi0/6 | connected to DS1 on port Gi3/1 | 10.3.4.3 |
 - vlan 99 : vlan natif, management
 
 | Périphérique  | PortChannel | Port Physique |  Infos
-|---|-----|----|----|
+|:---:|:-----:|:----:|:----:|
 DS1 | po1 | Gi0/0, Gi1/0 | Link to AS1 |
 DS1 | po11 | Gi0/1, Gi1/1 | Link to AS2 |
 DS1 | po3 | Gi0/2, Gi1/2 | Link to DS2 | 
@@ -33,7 +33,7 @@ DS2 | po22 | Gi0/1, Gi1/1 | Link to AS1 |
 DS2 | po3 | Gi0/2, Gi1/2  | Link to DS1 |
 
 | Périphérique  | Interface | Spanning-Tree |  Adresse ipv4
-|---|-----|----|----|
+|:---:|:-----:|----|:----:|
 DS1 | VLAN10 | Root Primary | 10.192.10.252/24 | 
 DS1 | VLAN20 | Root Secondary | 10.192.20.252/24 |  
 DS1 | VLAN30 | Root Primary | 10.192.30.252/24 | 
