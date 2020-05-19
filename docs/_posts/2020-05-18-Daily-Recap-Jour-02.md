@@ -46,6 +46,10 @@ categories: welcome
     - configuration EIGRP
     - configuration NAT
  
+  - Debrieffing
+  ```
+  La topogie fonctionne ? Problèmes recontrés ?
+  ```
 
  - Update docs
    - [ ] Update Scrum
