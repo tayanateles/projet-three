@@ -56,24 +56,24 @@ interfaces:
     description: "Trunk Group Channel22 to DS2"
     trunk:
       native: 99
-#  - id: GigabitEthernet0/2
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet0/3
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet1/2
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet1/3
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet3/0
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet3/1
-#    description: "Stub interface"
-#    stub: true
-#  - id: GigabitEthernet3/2
-#    description: "Stub interface"
-#    stub: true
+  - id: GigabitEthernet0/2
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet0/3
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet1/2
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet1/3
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet3/0
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet3/1
+    description: "Stub interface"
+    stub: true
+  - id: GigabitEthernet3/2
+    description: "Stub interface"
+    stub: true
