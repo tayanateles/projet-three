@@ -28,6 +28,7 @@ Passerelle IPv6 vers l'internet : fe80::e53:21ff:fe38:5800
 
 # VLANS
 VLAN | IPv4 | Passerelle | Port Access (AS1 et AS2) | IPv6 |
+|:---:|:-----:|:----:|:----:|:----:|
 | vlan 10 | 10.192.10.0/24 | 10.192.10.254 | |
 | vlan 20 | 10.192.20.0/24 | 10.192.20.254 | |
 | vlan 30 | 10.192.30.0/24 | 10.192.30.254 | |
