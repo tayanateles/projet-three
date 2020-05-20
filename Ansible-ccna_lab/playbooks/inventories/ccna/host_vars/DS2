@@ -187,7 +187,7 @@ interfaces:
   - id: GigabitEthernet2/1
     description: "Link to R2 Core"
     noswitchport: true
-    ipv4_address: 10.2.3.2/24
+    ipv4_address: 10.2.3.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -204,7 +204,7 @@ interfaces:
   - id: GigabitEthernet3/1
     description: "Link to R2 Core"
     noswitchport: true
-    ipv4_address: 10.2.4.2/24
+    ipv4_address: 10.2.4.1/24
     rip:
     eigrp4:
     ospfv2:
