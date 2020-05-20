@@ -291,22 +291,22 @@ routing:
 #      mode: standby
 dhcp:
   dhcp_pool:
-    - id: "VLAN10"
+    - id: 10
       network: 10.192.10.0
       netmask: 255.255.255.0
       router: 10.192.10.254
       dns: 1.1.1.1
-    - id: "VLAN20"
+    - id: 20
       network: 10.192.20.0
       netmask: 255.255.255.0
       router: 10.192.20.254
       dns: 1.1.1.1
-    - id: "VLAN30"
+    - id: 30
       network: 10.192.30.0
       netmask: 255.255.255.0
       router: 10.192.30.254
       dns: 1.1.1.1
-    - id: "VLAN40"
+    - id: 40
       network: 10.192.40.0
       netmask: 255.255.255.0
       router: 10.192.40.254
