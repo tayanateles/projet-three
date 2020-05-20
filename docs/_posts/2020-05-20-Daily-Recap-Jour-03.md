@@ -21,7 +21,7 @@ categories: welcome
  
  
  
-  - Debrieffing
+- Debrieffing
   
 > Après avoir implémenté la configuration à partir de l'outil ansible nous avons rencontré un problème avec la configuration dhcp.
 > La tâche de configuration des addresses ipv6 a échoué. L'hypothèse que cette erreur empêcherait l'exécution de la  tâche suivante (dhcp) nous a conduit à supprimer la configuration de ces adresses, ce qui a réglé le problème de configuration dhcp. 
