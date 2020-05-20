@@ -7,4 +7,8 @@
   tasks:
     - name: COPY RUNNING CONFIG TO ROUTER
       command: scp /root/projet-three/Ansible-ccna_lab/playbooks/files/default_configs/{{ hostname }}.cfg {{ hostname }}:/{{ hostname }}.cfg
-  
+    
+    - name: CONFIG REPLACE
+      ios_command:
+        commands:
+          - config replace flash:{{ hostname }}.cfg force
