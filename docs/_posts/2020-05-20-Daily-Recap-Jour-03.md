@@ -34,7 +34,7 @@ categories: welcome
  - Update docs
    - [x] Update Scrum
    - [x] Update Blog
-   - [x] Update [Gantt%20projet%203.xlsx](https://github.com/reseau-2020/projet-three/blob/master/Gantt%20projet%203.xlsx)
+   - [x] Update [Gantt_projet_3.xlsx](https://github.com/reseau-2020/projet-three/blob/master/Gantt_projet_3.xlsx)
     
     
 ## Programme du 22.05.2020
