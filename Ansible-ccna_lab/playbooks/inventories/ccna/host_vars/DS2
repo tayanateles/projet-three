@@ -160,7 +160,7 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
+#    ipv6_addresses:
 #      - 'FE80::D:3'
     eigrp6:
     ospfv3:
@@ -177,7 +177,7 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
+#    ipv6_addresses:
 #      - 'FE80::D:3'
     eigrp6:
     ospfv3:
@@ -194,7 +194,7 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
+#    ipv6_addresses:
 #      - 'FE80::D:3'
     eigrp6:
     ospfv3:
@@ -211,7 +211,7 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-    ipv6_addresses:
+#    ipv6_addresses:
 #      - 'FE80::D:3'
     eigrp6:
     ospfv3:
