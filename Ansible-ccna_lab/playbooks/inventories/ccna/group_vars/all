@@ -3,7 +3,7 @@ domain_name: lan
 ipv4:
   routing:
 #    - rip
-    - eigrp
+     - eigrp
 #    - ospf
 ipv6:
   enabled: no
