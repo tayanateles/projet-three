@@ -13,16 +13,19 @@ categories: welcome
    - [ ] Corriger les erreurs de syntaxes
    - [ ] Diagnostiquer le bon fonctionnement de la topologie
 
+
 - Ipv6 
   - [ ] Tableau adresssage IPv6
   - [ ] Validation Ipv6
   - [ ] Lancement de la topologie en IPv6
  
  
+ 
 - Debrieffing
   
 > 
 >
+
 
  - Update docs
    - [ ] Update Scrum
