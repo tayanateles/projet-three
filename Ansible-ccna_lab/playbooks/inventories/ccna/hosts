@@ -20,9 +20,10 @@ access
 
 [routers:children]
 core
+distribution
 
 [switches:children]
-blocks
+access
 
 [cisco:children]
 core
