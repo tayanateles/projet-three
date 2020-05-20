@@ -34,7 +34,7 @@ categories: welcome
  - Update docs
    - [x] Update Scrum
    - [x] Update Blog
-   - [x] Update [Topologie.PNG](https://github.com/reseau-2020/projet-three/blob/master/Topologie.PNG)
+   - [x] Update [Gantt%20projet%203.xlsx](https://github.com/reseau-2020/projet-three/blob/master/Gantt%20projet%203.xlsx)
     
     
 ## Programme du 22.05.2020
