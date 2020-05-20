@@ -35,6 +35,7 @@ VLAN | IPv4 | Passerelle | Port Access (AS1 et AS2) | IPv6 |
 | vlan 40 | 10.192.40.0/24 | 10.192.40.254 | Gi2/3 |
 | vlan 99 | vlan natif | 10.192.1.254 | - | 
 
+##Portchannel
 | Périphérique  | PortChannel | Port Physique |  Infos
 |:---:|:-----:|:----:|:----:|
 DS1 | po1 | Gi0/0, Gi1/0 | Link to AS1 |
@@ -44,6 +45,7 @@ DS2 | po2 | Gi0/0, Gi1/0 | Link to AS2 |
 DS2 | po22 | Gi0/1, Gi1/1 | Link to AS1 |
 DS2 | po3 | Gi0/2, Gi1/2  | Link to DS1 |
 
+##Spanning-Tree
 | Périphérique  | Interface | Spanning-Tree |  Adresse ipv4
 |:---:|:-----:|----|:----:|
 DS1 | VLAN10 | Root Primary | 10.192.10.252/24 | 
