@@ -17,8 +17,8 @@ R3 | Gi0/5 | connected to DS1 on port Gi2/1 | 10.3.3.3 | fe80::3 | | 2001:470:c8
 R3 | Gi0/6 | connected to DS1 on port Gi3/1 | 10.3.4.3 | fe80::3 | | 2001:470:c814:3000:3::3 | 
 DS1 | Gi2/0 | connected to R2 on port Gi0/2 | 10.2.1.1 | fe80::d1 | | 2001:470:c814:3000:d::d1 | 
 DS1 | Gi3/0 | connected to R2 on port Gi0/4 | 10.2.2.1 | fe80::d1 | | 2001:470:c814:3000:d::d1 | 
-DS1 | Gi2/1 | connected to R3 on port Gi0/5 | 10.2.3.1 | fe80::d1 | | 2001:470:c814:3000:d::d1 | 
-DS1 | Gi3/1 | connected to R3 on port Gi0/6 | 10.2.4.1 | fe80::d1 | | 2001:470:c814:3000:d::d1 | 
+DS1 | Gi2/1 | connected to R3 on port Gi0/5 | 10.3.3.1 | fe80::d1 | | 2001:470:c814:3000:d::d1 | 
+DS1 | Gi3/1 | connected to R3 on port Gi0/6 | 10.3.4.1 | fe80::d1 | | 2001:470:c814:3000:d::d1 | 
 DS2 | Gi2/1 | connected to R2 on port Gi0/5 | 10.2.3.1 | fe80::d2 | | 2001:470:c814:3000:d::d2 | 
 DS2 | Gi3/1 | connected to R2 on port Gi0/6 | 10.2.4.1 | fe80::d2 | | 2001:470:c814:3000:d::d2 | 
 DS2 | Gi2/0 | connected to R3 on port Gi0/3 | 10.3.1.2 | fe80::d2 | | 2001:470:c814:3000:d::d2 | 
