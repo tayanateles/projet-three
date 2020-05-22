@@ -42,7 +42,7 @@ VLAN | IPv4 | IPv6 privée | IPv6 publique |
 | vlan 20 | 10.192.20.0/24 | fd00:470:c814:3020::/64 | 2001:470:c814:3020::/64 |
 | vlan 30 | 10.192.30.0/24 | fd00:470:c814:3030::/64 | 2001:470:c814:3030::/64 |
 | vlan 40 | 10.192.40.0/24 | fd00:470:c814:3040::/64 | 2001:470:c814:3040::/64 |
-| vlan 99 |  10.192.1.254 | vlan natif
+| vlan 99 |  10.192.1.254 | vlan natif & gestion
 
 ## Portchannel
 | Périphérique  | PortChannel | Port Physique |  Infos
