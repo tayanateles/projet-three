@@ -50,7 +50,7 @@ VLAN | IPv4 | IPv6 privée | IPv6 publique |
 | vlan 40 | 10.192.40.0/24 | fd00:470:c814:3040::/64 | 2001:470:c814:3040::/64 |
 | vlan 99 |  10.192.1.254 | vlan natif & gestion
 ```
-Le Vlan de gestion et Vlan natif pourrait être séparés. 
+Le Vlan de gestion et Vlan natif pourraient être séparés. 
 Le Vlan de gestion n'est pas utile dans notre cas (déploiement par Ansible).
 Toutefois, nous l'avons conservé pour des raisons de sécurité (si l'accès distant à partir de notre console de controle tombe par exemple).
 ```
