@@ -17,8 +17,6 @@ interfaces:
       pri: 255
     ipv6_addresses:
       - 'FE80::1'
-      - 'fd00:470:c814:3000::1/64'
-      - '2001:470:c814:3000::1/64'
     eigrp6:
     ospfv3:
       area: 0
