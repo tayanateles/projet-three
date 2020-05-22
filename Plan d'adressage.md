@@ -1,38 +1,38 @@
 # PLAN D'ADRESSAGE
 
-| Périphérique  |Interfaces  |Infos  | Adresse ipv4  | IPv6 Link-local | IPv6 privée | IPv6 publique |
-|:---:|:-----:|:-----:|:----:|:----:|:----:|:----:|
-R1 | Gi0/0 | connected to INTERNET | DHCP | fe80::cafe:3 | - | - |
-R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | fe80::1 | - | - |
-R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 | fe80::1 | - | - |  
-R2 | Gi0/1 | connected to R1 on port Gi0/2 | 10.1.1.2 | fe80::2 | - | - | 
-R2 | Gi0/2 | connected to DS1 on port Gi2/0 | 10.2.1.2 | fe80::2 | - | - | 
-R2 | Gi0/3 | connected to R3 on port Gi0/2 | 10.1.3.2| fe80::2 | - | - | 
-R2 | Gi0/4 | connected to DS1 on port Gi3/0 | 10.2.2.2 | fe80::2 | - | - | 
-R2 | Gi0/5 | connected to DS2 on port Gi2/1 | 10.2.3.2 | fe80::2 | - | - | 
-R2 | Gi0/6 | connected to DS2 on port Gi3/1 | 10.2.4.2 | fe80::2 | - | - | 
-R3 | Gi0/1 | connected to R1 on port Gi0/3 | 10.1.2.3 | fe80::3 | - | - | 
-R3 | Gi0/2 | connected to R2 on port Gi0/3 | 10.1.3.3 | fe80::3 | - | - | 
-R3 | Gi0/3 | connected to DS2 on port Gi2/0 | 10.3.1.3 | fe80::3 | - | - | 
-R3 | Gi0/4 | connected to DS2 on port Gi3/0 | 10.3.2.3 | fe80::3 | - | - | 
-R3 | Gi0/5 | connected to DS1 on port Gi2/1 | 10.3.3.3 | fe80::3 | - | - | 
-R3 | Gi0/6 | connected to DS1 on port Gi3/1 | 10.3.4.3 | fe80::3 | - | - | 
-DS1 | Gi2/0 | connected to R2 on port Gi0/2 | 10.2.1.1 | fe80::d1 | - | - | 
-DS1 | Gi3/0 | connected to R2 on port Gi0/4 | 10.2.2.1 | fe80::d1 | - | - | 
-DS1 | Gi2/1 | connected to R3 on port Gi0/5 | 10.3.3.1 | fe80::d1 | - | - | 
-DS1 | Gi3/1 | connected to R3 on port Gi0/6 | 10.3.4.1 | fe80::d1 | - | - | 
-DS2 | Gi2/1 | connected to R2 on port Gi0/5 | 10.2.3.1 | fe80::d2 | - | - | 
-DS2 | Gi3/1 | connected to R2 on port Gi0/6 | 10.2.4.1 | fe80::d2 | - | - | 
-DS2 | Gi2/0 | connected to R3 on port Gi0/3 | 10.3.1.2 | fe80::d2 | - | - | 
-DS2 | Gi3/0 | connected to R3 on port Gi0/4 | 10.3.2.2 | fe80::d2 | - | - | 
-DS1 | VLAN10 | Port Access Gi2/0 | 10.192.10.254 | fe80::d0 | - |
-DS1 | VLAN20 | Port Access Gi2/1 | 10.192.20.254 | fe80::d0 | - |
-DS1 | VLAN30 | Port Access Gi2/2 | 10.192.30.254 | fe80::d0 | - |
-DS1 | VLAN40 | Port Access Gi2/3 | 10.192.40.254 | fe80::d0 | - |
-DS2 | VLAN10 | Port Access Gi2/0 | 10.192.10.254 | fe80::d0 | - |
-DS2 | VLAN20 | Port Access Gi2/1 | 10.192.20.254 | fe80::d0 | - |
-DS2 | VLAN30 | Port Access Gi2/2 | 10.192.30.254 | fe80::d0 | - |
-DS2 | VLAN40 | Port Access Gi2/3 | 10.192.40.254 | fe80::d0 | - |
+| Périphérique  |Interfaces  |Infos  | Adresse ipv4  | IPv6 Link-local |
+|:---:|:-----:|:-----:|:----:|:----:|
+R1 | Gi0/0 | connected to INTERNET | DHCP | fe80::cafe:3 |
+R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | fe80::1 |
+R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 | fe80::1 |
+R2 | Gi0/1 | connected to R1 on port Gi0/2 | 10.1.1.2 | fe80::2 |
+R2 | Gi0/2 | connected to DS1 on port Gi2/0 | 10.2.1.2 | fe80::2 |
+R2 | Gi0/3 | connected to R3 on port Gi0/2 | 10.1.3.2| fe80::2 | 
+R2 | Gi0/4 | connected to DS1 on port Gi3/0 | 10.2.2.2 | fe80::2 |
+R2 | Gi0/5 | connected to DS2 on port Gi2/1 | 10.2.3.2 | fe80::2 |
+R2 | Gi0/6 | connected to DS2 on port Gi3/1 | 10.2.4.2 | fe80::2 |
+R3 | Gi0/1 | connected to R1 on port Gi0/3 | 10.1.2.3 | fe80::3 |
+R3 | Gi0/2 | connected to R2 on port Gi0/3 | 10.1.3.3 | fe80::3 |
+R3 | Gi0/3 | connected to DS2 on port Gi2/0 | 10.3.1.3 | fe80::3 |
+R3 | Gi0/4 | connected to DS2 on port Gi3/0 | 10.3.2.3 | fe80::3 |
+R3 | Gi0/5 | connected to DS1 on port Gi2/1 | 10.3.3.3 | fe80::3 |
+R3 | Gi0/6 | connected to DS1 on port Gi3/1 | 10.3.4.3 | fe80::3 |
+DS1 | Gi2/0 | connected to R2 on port Gi0/2 | 10.2.1.1 | fe80::d1 |
+DS1 | Gi3/0 | connected to R2 on port Gi0/4 | 10.2.2.1 | fe80::d1 |
+DS1 | Gi2/1 | connected to R3 on port Gi0/5 | 10.3.3.1 | fe80::d1 |
+DS1 | Gi3/1 | connected to R3 on port Gi0/6 | 10.3.4.1 | fe80::d1 |
+DS2 | Gi2/1 | connected to R2 on port Gi0/5 | 10.2.3.1 | fe80::d2 |
+DS2 | Gi3/1 | connected to R2 on port Gi0/6 | 10.2.4.1 | fe80::d2 |
+DS2 | Gi2/0 | connected to R3 on port Gi0/3 | 10.3.1.2 | fe80::d2 | 
+DS2 | Gi3/0 | connected to R3 on port Gi0/4 | 10.3.2.2 | fe80::d2 |
+DS1 | VLAN10 | Port Access Gi2/0 | 10.192.10.254 | fe80::d0 |
+DS1 | VLAN20 | Port Access Gi2/1 | 10.192.20.254 | fe80::d0 |
+DS1 | VLAN30 | Port Access Gi2/2 | 10.192.30.254 | fe80::d0 |
+DS1 | VLAN40 | Port Access Gi2/3 | 10.192.40.254 | fe80::d0 |
+DS2 | VLAN10 | Port Access Gi2/0 | 10.192.10.254 | fe80::d0 |
+DS2 | VLAN20 | Port Access Gi2/1 | 10.192.20.254 | fe80::d0 |
+DS2 | VLAN30 | Port Access Gi2/2 | 10.192.30.254 | fe80::d0 |
+DS2 | VLAN40 | Port Access Gi2/3 | 10.192.40.254 | fe80::d0 |
 Passerelle IPv6 vers l'internet : fe80::e53:21ff:fe38:5800
 
 # VLANS
@@ -43,6 +43,8 @@ VLAN | IPv4 | IPv6 privée | IPv6 publique |
 | vlan 30 | 10.192.30.0/24 | fd00:470:c814:3030::/64 | 2001:470:c814:3030::/64 |
 | vlan 40 | 10.192.40.0/24 | fd00:470:c814:3040::/64 | 2001:470:c814:3040::/64 |
 | vlan 99 |  10.192.1.254 | vlan natif & gestion
+
+Le Vlan de gestion et Vlan natif pourrait être séparés. Le Vlan de gestion n'est pas utile dans notre cas (déploiement par Ansible) mais nous l'avons conservé pour des raisons de sécurité (si l'accès distant à partir de notre console de controle tombe par exemple).
 
 ## Portchannel
 | Périphérique  | PortChannel | Port Physique |  Infos
