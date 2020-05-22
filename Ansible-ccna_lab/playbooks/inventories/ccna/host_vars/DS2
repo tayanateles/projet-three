@@ -88,9 +88,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#      - 'FE80::D:3'
-#      - 'FD00:1AB:1A3:10::2/64'
+    ipv6_addresses:
+      - 'FE80::D:3'
+      - 'FD00:1AB:1A3:10::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -106,9 +106,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#     - 'FE80::D:3'
-#      - 'FD00:1AB:1A3:20::2/64'
+    ipv6_addresses:
+     - 'FE80::D:3'
+      - 'FD00:1AB:1A3:20::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -124,9 +124,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#      - 'FE80::D:3'
-#      - 'FD00:1AB:1A3:30::2/64'
+    ipv6_addresses:
+      - 'FE80::D:3'
+      - 'FD00:1AB:1A3:30::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -142,9 +142,9 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#      - 'FE80::D:3'
-#      - 'FD00:1AB:1A3:40::2/64'
+    ipv6_addresses:
+      - 'FE80::D:3'
+      - 'FD00:1AB:1A3:40::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -160,8 +160,8 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#      - 'FE80::D:3'
+    ipv6_addresses:
+      - 'FE80::D:3'
     eigrp6:
     ospfv3:
       area: 0
@@ -177,8 +177,8 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#      - 'FE80::D:3'
+    ipv6_addresses:
+      - 'FE80::D:3'
     eigrp6:
     ospfv3:
       area: 0
@@ -194,8 +194,8 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#      - 'FE80::D:3'
+    ipv6_addresses:
+      - 'FE80::D:3'
     eigrp6:
     ospfv3:
       area: 0
@@ -211,8 +211,8 @@ interfaces:
       area: 0
       cost: 1
       pri: 255
-#    ipv6_addresses:
-#      - 'FE80::D:3'
+    ipv6_addresses:
+      - 'FE80::D:3'
     eigrp6:
     ospfv3:
       area: 0
@@ -263,32 +263,32 @@ routing:
       priority: 150
       preempt: true
       mode: standby
-#    - id: Vlan10
-#      group: 16
-#      protocol: ipv6
-#      address: 'FE80::D:1'
-#      preempt: false
-#      mode: standby
-#    - id: Vlan20
-#      group: 26
-#      protocol: ipv6
-#      address: 'FE80::D:1'
-#      priority: 150
-#      preempt: true
-#      mode: standby
-#    - id: Vlan30
-#      group: 36
-#      protocol: ipv6
-#      address: 'FE80::D:1'
-#      preempt: false
-#      mode: standby
-#    - id: Vlan40
-#      group: 46
-#      protocol: ipv6
-#      address: 'FE80::D:1'
-#      priority: 150
-#      preempt: true
-#      mode: standby
+    - id: Vlan10
+      group: 16
+      protocol: ipv6
+      address: 'FE80::D:1'
+      preempt: false
+      mode: standby
+    - id: Vlan20
+      group: 26
+      protocol: ipv6
+      address: 'FE80::D:1'
+      priority: 150
+      preempt: true
+      mode: standby
+    - id: Vlan30
+      group: 36
+      protocol: ipv6
+      address: 'FE80::D:1'
+      preempt: false
+      mode: standby
+    - id: Vlan40
+      group: 46
+      protocol: ipv6
+      address: 'FE80::D:1'
+      priority: 150
+      preempt: true
+      mode: standby
 dhcp:
   dhcp_pool:
     - id: "VLAN10"
