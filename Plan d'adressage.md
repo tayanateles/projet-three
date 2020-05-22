@@ -1,7 +1,8 @@
 # PLAN D'ADRESSAGE
-
+```
 Masque Ipv6 par défaut : /64
 Masque Ipv4 par défaut : /24
+```
 
 | Périphérique  |Interfaces  |Infos  | Adresse ipv4  | IPv6 Link-local |
 |:---:|:-----:|:-----:|:----:|:----:|
@@ -36,7 +37,9 @@ DS2 | VLAN10 | Port Access Gi2/0 | 10.192.10.254 | fe80::d0 |
 DS2 | VLAN20 | Port Access Gi2/1 | 10.192.20.254 | fe80::d0 |
 DS2 | VLAN30 | Port Access Gi2/2 | 10.192.30.254 | fe80::d0 |
 DS2 | VLAN40 | Port Access Gi2/3 | 10.192.40.254 | fe80::d0 |
+```
 Passerelle IPv6 vers l'internet : fe80::e53:21ff:fe38:5800
+```
 
 # VLANS
 VLAN | IPv4 | IPv6 privée | IPv6 publique |
@@ -46,9 +49,9 @@ VLAN | IPv4 | IPv6 privée | IPv6 publique |
 | vlan 30 | 10.192.30.0/24 | fd00:470:c814:3030::/64 | 2001:470:c814:3030::/64 |
 | vlan 40 | 10.192.40.0/24 | fd00:470:c814:3040::/64 | 2001:470:c814:3040::/64 |
 | vlan 99 |  10.192.1.254 | vlan natif & gestion
-
+```
 Le Vlan de gestion et Vlan natif pourrait être séparés. Le Vlan de gestion n'est pas utile dans notre cas (déploiement par Ansible) mais nous l'avons conservé pour des raisons de sécurité (si l'accès distant à partir de notre console de controle tombe par exemple).
-
+```
 ## Portchannel
 | Périphérique  | PortChannel | Port Physique |  Infos
 |:---:|:-----:|:----:|:----:|
