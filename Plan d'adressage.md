@@ -1,5 +1,8 @@
 # PLAN D'ADRESSAGE
 
+Masque Ipv6 par défaut : /64
+Masque Ipv4 par défaut : /24
+
 | Périphérique  |Interfaces  |Infos  | Adresse ipv4  | IPv6 Link-local |
 |:---:|:-----:|:-----:|:----:|:----:|
 R1 | Gi0/0 | connected to INTERNET | DHCP | fe80::cafe:3 |
