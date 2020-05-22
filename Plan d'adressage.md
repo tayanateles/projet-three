@@ -2,9 +2,8 @@
 
 | Périphérique  |Interfaces  |Infos  | Adresse ipv4  | IPv6 Link-local | IPv6 privée | IPv6 publique |
 |:---:|:-----:|:-----:|:----:|:----:|:----:|:----:|
-R1 | Gi0/0 | connected to INTERNET | dhcp | fe80::1 | fe80::cafe:3 | 2001:470:c814:3000::1 |
-R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | fe80::1 | fd00:470:c814:3000::1 | 2001:470:c814:3000::1 |
-R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 | fe80::1 | fd00:470:c814:3000::1 | 2001:470:c814:3000::1 |  
+R1 | Gi0/2 | connected to R2 on port Gi0/1 | 10.1.1.1 | fe80::cafe:3 | fd00:470:c814:3000::1 | 2001:470:c814:3000::1 |
+R1 | Gi0/3 | connected to R3 on port Gi0/1 | 10.1.2.1 | fe80::cafe:3 | fd00:470:c814:3000::1 | 2001:470:c814:3000::1 |  
 R2 | Gi0/1 | connected to R1 on port Gi0/2 | 10.1.1.2 | fe80::2 | fd00:470:c814:3000::2 | 2001:470:c814:3000::2 | 
 R2 | Gi0/2 | connected to DS1 on port Gi2/0 | 10.2.1.2 | fe80::2 | fd00:470:c814:3000::2 | 2001:470:c814:3000::2 | 
 R2 | Gi0/3 | connected to R3 on port Gi0/2 | 10.1.3.2| fe80::2 | fd00:470:c814:3000::2 | 2001:470:c814:3000::2 | 
