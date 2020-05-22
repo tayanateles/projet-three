@@ -13,6 +13,7 @@ interfaces:
       pri: 255
     ipv6_addresses:
       - 'FE80::1'
+      - 'FE80::cafe:3/64'
       - 'FD00:FD00:FD00:1::1/64'
     eigrp6:
     ospfv3:
