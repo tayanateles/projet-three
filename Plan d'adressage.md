@@ -1,5 +1,4 @@
 # PLAN D'ADRESSAGE
-Passerelle vers l'internet Ipv6 : fe80::e53:21ff:fe38:5800
 
 | Périphérique  |Interfaces  |Infos  | Adresse ipv4  | IPv6 Link-local | IPv6 privée | IPv6 publique |
 |:---:|:-----:|:-----:|:----:|:----:|:----:|:----:|
