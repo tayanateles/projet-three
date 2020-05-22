@@ -295,22 +295,22 @@ dhcp:
     - id: "VLAN10"
       network: 10.192.10.0
       netmask: 255.255.255.0
-      router: 10.192.10.252
+      router: 10.192.10.254
       dns: 1.1.1.1
     - id: "VLAN20"
       network: 10.192.20.0
       netmask: 255.255.255.0
-      router: 10.192.20.253
+      router: 10.192.20.254
       dns: 1.1.1.1
     - id: "VLAN30"
       network: 10.192.30.0
       netmask: 255.255.255.0
-      router: 10.192.30.252
+      router: 10.192.30.254
       dns: 1.1.1.1
     - id: "VLAN40"
       network: 10.192.40.0
       netmask: 255.255.255.0
-      router: 10.192.40.253
+      router: 10.192.40.254
       dns: 1.1.1.1
   dhcp_excluded:
     - start: 10.192.10.100
