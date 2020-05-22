@@ -36,7 +36,7 @@ VLAN | IPv4 | Passerelle | Port Access (AS1 et AS2) | IPv6 Virtuelle |
 | vlan 20 | 10.192.20.0/24 | 10.192.20.254 | Gi2/1 | fe80::a20
 | vlan 30 | 10.192.30.0/24 | 10.192.30.254 | Gi2/2 | fe80::a30
 | vlan 40 | 10.192.40.0/24 | 10.192.40.254 | Gi2/3 | fe80::a40
-| vlan 99 | vlan natif | 10.192.1.254 | - | fe80::d99:99
+| vlan 99 | vlan natif | 10.192.1.254 | - | fe80::a99
 
 ## Portchannel
 | Périphérique  | PortChannel | Port Physique |  Infos
