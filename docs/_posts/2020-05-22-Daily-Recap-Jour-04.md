@@ -13,10 +13,11 @@ categories: welcome
    - [x] Corriger les erreurs de syntaxes
    - [x] Diagnostiquer le bon fonctionnement de la topologie (notament avec EIGRP)
 
+
  - Planification d'IPv6
-   - [ ] Tableau adresssage IPv6
-   - [ ] Validation Ipv6
-   - [ ] Lancement de la topologie en IPv6
+   - [x] Tableau adresssage IPv6
+   - [x] Validation Ipv6
+   - [x] Lancement de la topologie en IPv6 mais pas de diagnostique effectué
  
  
  
@@ -35,6 +36,9 @@ categories: welcome
     
 ## Programme du 25.05.2020
   
- - 
+ - Diagnostiquer les eventuels problèmes en IPv6
+ - Mettre en place la connectivité vers l'Internet avec IPv6 public
+ - Mettre en place un pare-feu (Ipv4/Ipv6)
+ - Mettre en place un VPN (Ipv4/Ipv6)
  
   
