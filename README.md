@@ -7,7 +7,7 @@
 **Groupe**: Tayana/Sandrine/Maxime/Cyril
 
 
-[Gantt](https://github.com/reseau-2020/projet-three/blob/master/Gantt%20projet%203.xlsx)
+[Gantt](https://github.com/reseau-2020/projet-three/blob/master/Gantt_projet_3.xlsx)
 
 [Scrum](https://github.com/reseau-2020/projet-three/projects/1)
 
