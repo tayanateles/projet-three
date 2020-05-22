@@ -12,7 +12,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'fe80::cafe:3'
+      - 'FE80::1'
       - 'FD00:FD00:FD00:1::1/64'
     eigrp6:
     ospfv3:
