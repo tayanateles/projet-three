@@ -90,7 +90,7 @@ interfaces:
       pri: 255
     ipv6_addresses:
       - 'FE80::D2'
-      - 'fd00:fd03:fd03:fd03::10:253/80'
+      - 'fd00:470:c814:3000:10::253/80'
       - '2001:470:c814:3000:10::253/80'
     eigrp6:
     ospfv3:
@@ -109,7 +109,7 @@ interfaces:
       pri: 255
     ipv6_addresses:
      - 'FE80::D2'
-     - 'fd00:fd03:fd03:fd03::20:253/80'
+     - 'fd00:470:c814:3000:20::253/80'
      - '2001:470:c814:3000:20::253/80'
     eigrp6:
     ospfv3:
@@ -128,7 +128,7 @@ interfaces:
       pri: 255
     ipv6_addresses:
       - 'FE80::D:3'
-      - 'fd00:fd03:fd03:fd03::30:253/80'
+      - 'fd00:470:c814:3000:30::253/80'
       - '2001:470:c814:3000:30::253/80'
     eigrp6:
     ospfv3:
@@ -147,7 +147,7 @@ interfaces:
       pri: 255
     ipv6_addresses:
       - 'FE80::D:3'
-      - 'fd00:fd03:fd03:fd03::40:253/80'
+      - 'fd00:470:c814:3000:40::253/80'
       - '2001:470:c814:3000:40::253/80'
     eigrp6:
     ospfv3:
@@ -166,8 +166,6 @@ interfaces:
       pri: 255
     ipv6_addresses:
       - 'FE80::D2'
-      - 'fd00:470:c814:3000::d2/64'
-      - '2001:470:c814:3000:d::d2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -272,26 +270,26 @@ routing:
     - id: Vlan10
       group: 16
       protocol: ipv6
-      address: 'FE80::D:1'
+      address: 'FE80::D0'
       preempt: false
       mode: standby
     - id: Vlan20
       group: 26
       protocol: ipv6
-      address: 'FE80::D:1'
+      address: 'FE80::D0'
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan30
       group: 36
       protocol: ipv6
-      address: 'FE80::D:1'
+      address: 'FE80::D0'
       preempt: false
       mode: standby
     - id: Vlan40
       group: 46
       protocol: ipv6
-      address: 'FE80::D:1'
+      address: 'FE80::D0'
       priority: 150
       preempt: true
       mode: standby
