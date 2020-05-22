@@ -62,7 +62,8 @@ DS2 | VLAN40 | Root Primary | 10.192.40.253/24 | fe80::d2 | fd00:470:c814:3000:4
 
 
 ## HSRP
-| Périphérique  | Interface |	Group |	Priorité
+| Périphérique  | Interface |	Group |	Priorité |
+|:---:|:-----:|:-----:|:----:|
 DS1 | VLAN10 | 10/16 |	150, prempt
 DS1 | VLAN20 | 20/26 |	default
 DS1 | VLAN30  | 30/36 |	150, prempt
