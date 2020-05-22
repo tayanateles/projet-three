@@ -25,17 +25,24 @@ DS2 | Gi2/1 | connected to R2 on port Gi0/5 | 10.2.3.1 | fe80::d2 | - | - |
 DS2 | Gi3/1 | connected to R2 on port Gi0/6 | 10.2.4.1 | fe80::d2 | - | - | 
 DS2 | Gi2/0 | connected to R3 on port Gi0/3 | 10.3.1.2 | fe80::d2 | - | - | 
 DS2 | Gi3/0 | connected to R3 on port Gi0/4 | 10.3.2.2 | fe80::d2 | - | - | 
-
+DS1 | VLAN10 | Port Access Gi2/0 | 10.192.10.254 | fe80::d0 | - |
+DS1 | VLAN20 | Port Access Gi2/1 | 10.192.20.254 | fe80::d0 | - |
+DS1 | VLAN30 | Port Access Gi2/2 | 10.192.30.254 | fe80::d0 | - |
+DS1 | VLAN40 | Port Access Gi2/3 | 10.192.40.254 | fe80::d0 | - |
+DS2 | VLAN10 | Port Access Gi2/0 | 10.192.10.254 | fe80::d0 | - |
+DS2 | VLAN20 | Port Access Gi2/1 | 10.192.20.254 | fe80::d0 | - |
+DS2 | VLAN30 | Port Access Gi2/2 | 10.192.30.254 | fe80::d0 | - |
+DS2 | VLAN40 | Port Access Gi2/3 | 10.192.40.254 | fe80::d0 | - |
 Passerelle IPv6 vers l'internet : fe80::e53:21ff:fe38:5800
 
 # VLANS
-VLAN | IPv4 | Passerelle Virtuelle | Port Access (AS1 et AS2) | IPv6 Virtuelle | IPv6 privée | IPv6 publique |
-|:---:|:-----:|:----:|:----:|:----:|:----:|:----:|
-| vlan 10 | 10.192.10.0/24 | 10.192.10.254 | Gi2/0 | fe80::d0 | fd00:470:c814:3000:10::/80 | 2001:470:c814:3000:10::/80 |
-| vlan 20 | 10.192.20.0/24 | 10.192.20.254 | Gi2/1 | fe80::d0 | fd00:470:c814:3000:20::/80 | 2001:470:c814:3000:20::/80 |
-| vlan 30 | 10.192.30.0/24 | 10.192.30.254 | Gi2/2 | fe80::d0 | fd00:470:c814:3000:30::/80 | 2001:470:c814:3000:30::/80 |
-| vlan 40 | 10.192.40.0/24 | 10.192.40.254 | Gi2/3 | fe80::d0 | fd00:470:c814:3000:40::/80 | 2001:470:c814:3000:40::/80 |
-| vlan 99 | vlan natif | 10.192.1.254 | - | - | - |
+VLAN | IPv4 | IPv6 privée | IPv6 publique |
+|:---:|:-----:|:----:|:----:|
+| vlan 10 | 10.192.10.0/24 | fd00:470:c814:3000:10::/80 | 2001:470:c814:3000:10::/80 |
+| vlan 20 | 10.192.20.0/24 | fd00:470:c814:3000:20::/80 | 2001:470:c814:3000:20::/80 |
+| vlan 30 | 10.192.30.0/24 | fd00:470:c814:3000:30::/80 | 2001:470:c814:3000:30::/80 |
+| vlan 40 | 10.192.40.0/24 | fd00:470:c814:3000:40::/80 | 2001:470:c814:3000:40::/80 |
+| vlan 99 |  10.192.1.254 | vlan natif
 
 ## Portchannel
 | Périphérique  | PortChannel | Port Physique |  Infos
@@ -47,27 +54,15 @@ DS2 | po2 | Gi0/0, Gi1/0 | Link to AS2 |
 DS2 | po22 | Gi0/1, Gi1/1 | Link to AS1 |
 DS2 | po3 | Gi0/2, Gi1/2  | Link to DS1 |
 
-## Spanning-Tree
-| Périphérique  | Interface | Spanning-Tree |  Adresse ipv4 | IPv6 Link-local | IPv6 privée | IPv6 publique |
-|:---:|:-----:|----|:----:|:----:|:----:|:----:|
-DS1 | VLAN10 | Root Primary | 10.192.10.252/24 | fe80::d1 | fd00:470:c814:3000:10::252 | 2001:470:c814:3000:10::252 | 
-DS1 | VLAN20 | Root Secondary | 10.192.20.252/24 | fe80::d1 | fd00:470:c814:3000:20::252 | 2001:470:c814:3000:20::252 |
-DS1 | VLAN30 | Root Primary | 10.192.30.252/24 | fe80::d1 | fd00:470:c814:3000:30::252 | 2001:470:c814:3000:30::252 |
-DS1 | VLAN40 | Root Secondary | 10.192.40.252/24 | fe80::d1 | fd00:470:c814:3000:40::252 | 2001:470:c814:3000:40::252 |
-DS2 | VLAN10 | Root Secondary | 10.192.10.253/24 | fe80::d2 | fd00:470:c814:3000:10::253 | 2001:470:c814:3000:10::253 |
-DS2 | VLAN20 | Root Primary | 10.192.20.253/24 | fe80::d2 | fd00:470:c814:3000:20::253 | 2001:470:c814:3000:20::253 |
-DS2 | VLAN30 | Root Secondary | 10.192.30.253/24 | fe80::d2 | fd00:470:c814:3000:30::253 | 2001:470:c814:3000:30::253 |
-DS2 | VLAN40 | Root Primary | 10.192.40.253/24 | fe80::d2 | fd00:470:c814:3000:40::253 | 2001:470:c814:3000:40::253 |
+## Spanning-Tree & HSRP
+| Périphérique  | Interface | Spanning-Tree |  Adresse ipv4 | IPv6 Link-local | IPv6 privée | IPv6 publique |Group |	Priorité |
+|:---:|:-----:|----|:----:|:----:|:----:|:----:|:----:|:----:|
+DS1 | VLAN10 | Root Primary | 10.192.10.252/24 | fe80::d1 | fd00:470:c814:3000:10::252 | 2001:470:c814:3000:10::252 | 10/16 |	150, prempt
+DS1 | VLAN20 | Root Secondary | 10.192.20.252/24 | fe80::d1 | fd00:470:c814:3000:20::252 | 2001:470:c814:3000:20::252 |20/26 |	default
+DS1 | VLAN30 | Root Primary | 10.192.30.252/24 | fe80::d1 | fd00:470:c814:3000:30::252 | 2001:470:c814:3000:30::252 | 30/36 |	150, prempt
+DS1 | VLAN40 | Root Secondary | 10.192.40.252/24 | fe80::d1 | fd00:470:c814:3000:40::252 | 2001:470:c814:3000:40::252 |40/46 |	default
+DS2 | VLAN10 | Root Secondary | 10.192.10.253/24 | fe80::d2 | fd00:470:c814:3000:10::253 | 2001:470:c814:3000:10::253 | 10/16 |	default
+DS2 | VLAN20 | Root Primary | 10.192.20.253/24 | fe80::d2 | fd00:470:c814:3000:20::253 | 2001:470:c814:3000:20::253 | 20/26 |	150, prempt
+DS2 | VLAN30 | Root Secondary | 10.192.30.253/24 | fe80::d2 | fd00:470:c814:3000:30::253 | 2001:470:c814:3000:30::253 | 30/36 |	default
+DS2 | VLAN40 | Root Primary | 10.192.40.253/24 | fe80::d2 | fd00:470:c814:3000:40::253 | 2001:470:c814:3000:40::253 | 40/46 |	150, prempt
 
-
-## HSRP
-| Périphérique  | Interface |	Group |	Priorité |
-|:---:|:-----:|:-----:|:----:|
-DS1 | VLAN10 | 10/16 |	150, prempt
-DS1 | VLAN20 | 20/26 |	default
-DS1 | VLAN30  | 30/36 |	150, prempt
-DS1 | VLAN40  | 40/46 |	default
-DS2 | VLAN10 | 10/16 |	default
-DS2 | VLAN20  | 20/26 |	150, prempt
-DS2 | VLAN30 | 30/36 |	default
-DS2 | VLAN40 | 40/46 |	150, prempt
