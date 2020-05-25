@@ -48,6 +48,28 @@ ipv6 eigrp 1
 `` 
 On remarque un log de eigrp nous indiquant qu'une nouvelle route a été apprise. Les `ping ipv6` de PC1 vers PC8 et de PC1 vers l'internet fonctionnent correctement.
 
+### NTP
+Nous avons d'abord ajusté l'heure de tous les périphériques Cisco :
+``
+(config)#clock timezone GMT +1
+(config)#clock summer-time FR recurring last SUN MAR 02:00 last SUN OCT 02:00
+``
+Deuxièmement, nous avons paramétré un server NTP publique sur R1 : 
+``
+(config)#ntp server 3.fr.pool.ntp.org
+(config)#ntp update-calendar
+``
+Ensuite, nous avons configuré une interface R1 (10.1.1.1) en tant que serveur NTP pour les autres périphériques Cisco :
+``
+(config)#ntp server 10.1.1.1
+(config)#ntp update-calendar
+``
+Nous avons constaté que les commutateurs AS1 et AS2 n'étaient pas synchronisés. Le problème a été résolu en désactivant le routage et en ajoutant une route par défaut sur ces deux périphériques, l'adresse utilisée a été la passerelle du sous-réseau virtuel de gestion (VLAN99).
+``
+(config)#no ip routing
+(config)#ip default-gateway 10.192.1.252
+``
+
 ### DNS 
 
 `ping` et `ping ipv6 www.google.com` fonctionnent sur R1, R2, R3, DS1 et DS2. Mais pas sur les PCs. 
