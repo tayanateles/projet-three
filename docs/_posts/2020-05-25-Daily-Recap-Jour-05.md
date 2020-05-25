@@ -108,10 +108,10 @@ ip dns server
 end
 wr
 
-`ping ip www.google.com`fonctionne à 100% sur R1, R2, R3
+`ping ip www.google.com`fonctionne à 100% sur R1, R2, R3, DS1, DS2, AS1 et AS2
 
 
-DNS fonctionne correctement sur la partie tripod. Mais pas sur le switchblock.
+DNS fonctionne correctement sur la partie tripod. Mais pas sur les Vlans.
 
  
  
