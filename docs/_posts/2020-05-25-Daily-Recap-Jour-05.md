@@ -92,7 +92,26 @@ Nous avons constaté que les commutateurs AS1 et AS2 n'étaient pas synchronisé
 
 ### DNS 
 
-`ping` et `ping ipv6 www.google.com` fonctionnent sur R1, R2, R3, DS1 et DS2. Mais pas sur les PCs. 
+On remarquera que désormais le routage et la communication en IPv6 sera préféré par défault lors de l'utilisation de `ping`.
+
+Sur R1, R2 et R3
+```
+R1(config)#ip name-server 1.1.1.1
+R1(config)#ip domain lookup
+R1(config)#ip dns server
+R1(config)#end
+```
+conf t
+ip name-server 1.1.1.1
+ip domain lookup
+ip dns server
+end
+wr
+
+`ping ip www.google.com`fonctionne à 100% sur R1, R2, R3
+
+
+DNS fonctionne correctement sur la partie tripod. Mais pas sur le switchblock.
 
  
  
