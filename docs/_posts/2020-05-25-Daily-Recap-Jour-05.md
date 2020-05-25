@@ -55,6 +55,7 @@ Nous avons d'abord ajusté l'heure de tous les périphériques Cisco :
 ``
 (config)#clock timezone GMT +1
 ``
+
 ``
 (config)#clock summer-time FR recurring last SUN MAR 02:00 last SUN OCT 02:00
 ``
@@ -64,6 +65,7 @@ Deuxièmement, nous avons paramétré un server NTP publique sur R1 :
 ``
 (config)#ntp server 3.fr.pool.ntp.org
 ``
+
 ``
 (config)#ntp update-calendar
 ``
@@ -73,6 +75,7 @@ Ensuite, nous avons configuré une interface R1 (10.1.1.1) en tant que serveur N
 ``
 (config)#ntp server 10.1.1.1
 ``
+
 ``
 (config)#ntp update-calendar
 ``
@@ -82,6 +85,7 @@ Nous avons constaté que les commutateurs AS1 et AS2 n'étaient pas synchronisé
 ``
 (config)#no ip routing
 ``
+
 ``
 (config)#ip default-gateway 10.192.1.252
 ``
