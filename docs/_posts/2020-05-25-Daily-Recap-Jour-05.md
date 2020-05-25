@@ -1,43 +1,69 @@
 ---
 layout: post
-title:  "Daily Recap JOUR 04"
-date:   2020-05-22
+title:  "Daily Recap JOUR 05"
+date:   2020-05-25
 categories: welcome
 ---
 
 
 ## Réalisations de la journée :
 
- - Mise en route de la topologie 
-   - [x] Correction des paramètres IPv4
-   - [x] Corriger les erreurs de syntaxes
-   - [x] Diagnostiquer le bon fonctionnement de la topologie (notament avec EIGRP)
+ - IPv6
+   - [x] Déploiement IPv6
+   - [x] Connectivité vers Internet
+   - [ ] DNS
+ 
+ - [x] NTP
+ 
 
+## Débriefing
 
- - Planification d'IPv6
-   - [x] Tableau adresssage IPv6
-   - [x] Validation Ipv6
-   - [x] Lancement de la topologie en IPv6 mais pas de diagnostique effectué
+### Connectivité IPv6 vers Internet
+
+Dans un premier temps, afin de déployer la connectivité vers l'internet, nous avions configuré une adresse statique en IPV6 `ipv6 route ::/0 g0/0 FE80::E53:21FF:FE38:5800` avec :
+ - `FE80::E53:21FF:FE38:5800` , l'adresse link-local de notre passerelle vers l'internet
+ - `g0/0` notre interface de sortie vers l'extérieur
+
+Avec un `show ipv6 route`sur R2 et R3, nous nous sommes aperçu que la route ne se distribuait pas automatiquement. Nous avons donc déployer `ipv6 route ::/0 g0/1 FE80::1` sur ces derniers.
+
+Cela n'était pas nécessaire. Nous aurions pu forcer R1 à distribuer cette route statique :
+``
+ipv6 router eigrp 1
+redistribute static
+`` 
+Par ailleurs, il est plus correct de limiter la route par défaut aux adresses publiques : `ipv6 route 2000::/3 g0/0 FE80::E53:21FF:FE38:5800`.
+
+Nous avons fait le choix de ne pas déployer de LAN directement connectée sur R1. Par conséquent, aucune interface de R1 ne dispose d'adresse publique et donc ne peut pas joindre directement internet. Il est nécessaire de `ping`à partir des PCs des VLANs.
+
+Toutefois, aucune connectivité vers l'internet ou entre les différents PC est observée.
+
+`show ipv6 route` sur DS1 et DS2 nous apprend qu'il n'y a pas de route apprise par eigrp vers l'internet.
+`show ipv6 eigrp neighbors`sur DS1 nous apprend qu'il ne voit pas R2 correctement.
+`show run | b ipv6 eigrp`sur R2 nous apprend que l'interface G0/4 n'est pas montée en eigrp.
+
+Sur R2 :
+``
+int g0/4
+ipv6 eigrp 1
+`` 
+On remarque un log de eigrp nous indiquant qu'une nouvelle route a été apprise. Les `ping ipv6` de PC1 vers PC8 et de PC1 vers l'internet fonctionnent correctement.
+
+### DNS 
+
+`ping` et `ping ipv6 www.google.com` fonctionnent sur R1, R2, R3, DS1 et DS2. Mais pas sur les PCs. 
+
  
  
- 
-- Debrieffing
-  
-> Nous avons résolu le problème lié à EIGRP dans la partie Core en implémentant l'adressage IPv6. 
-> La passerelle vers l'Internet ne fonctionnait pas à cause d'un trop plein d'information sur l'interface. 
-> Nous a vions fixé des adresses IPv6 privé et public pour chaque interface de routeur alors qu'il ne fallait pas.
 
+## Update docs
 
- - Update docs
    - [x] Update Scrum
    - [x] Update Blog
    - [x] Update [Gantt_projet_3.xlsx](https://github.com/reseau-2020/projet-three/blob/master/Gantt_projet_3.xlsx)
     
     
-## Programme du 25.05.2020
+## Programme du 26.05.2020
   
- - Diagnostiquer les eventuels problèmes en IPv6
- - Mettre en place la connectivité vers l'Internet avec IPv6 public
  - Mettre en place un pare-feu (Ipv4/Ipv6)
  - Mettre en place un VPN (Ipv4/Ipv6)
  
