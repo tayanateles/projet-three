@@ -1,16 +1,21 @@
 
 conf t
 !
+! On utilise des/md5 en phase 1
+!
 crypto isakmp policy 1
-encr aes 256
+encr des
+hash md5
 authentication pre-share
 group 5
+lifetime 86400
 !
 crypto isakmp key cisco123 address 192.168.122.55
 !
-! TRANSFORM SET
+! TRANSFORM SET - phase 2 des/md5
 !
-crypto ipsec transform-set cisco-to-forti3-set esp-aes 256 esp-sha-hmac
+crypto ipsec transform-set cisco-to-forti3-set esp-des esp-md5-hmac
+! crypto ipsec transform-set cisco-to-forti3-set esp-aes 256 esp-sha-hmac
 !
 ! CRYPTO MAP
 !
