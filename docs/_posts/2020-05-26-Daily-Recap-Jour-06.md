@@ -20,7 +20,7 @@ categories: welcome
  - [x] Debug DNS
 
 ## Débriefing
-[Topologie](https://github.com/reseau-2020/projet-three/blob/master/topologie20200526.png?raw=true)
+![Topologie](https://github.com/reseau-2020/projet-three/blob/master/topologie20200526.png?raw=true)
 
 ### Problèmes rencontrés
 
@@ -107,7 +107,7 @@ ip dhcp pool VLAN40
 
    - [x] Update Scrum
    - [x] Update Blog
-   - [x] update ![Topologie](https://github.com/reseau-2020/projet-three/blob/master/topologie20200526.png?raw=true)
+   - [x] update [Topologie](https://github.com/reseau-2020/projet-three/blob/master/topologie20200526.png?raw=true)
    - [x] Update [Gantt_projet_3.xlsx](https://github.com/reseau-2020/projet-three/blob/master/Gantt_projet_3.xlsx)
     
     
