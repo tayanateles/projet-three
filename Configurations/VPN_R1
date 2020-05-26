@@ -1,0 +1,39 @@
+
+!
+crypto isakmp policy 1
+encr aes 256
+authentication pre-share
+group 5
+!
+crypto isakmp key cisco123 address 192.168.122.55
+!
+! TRANSFORM SET
+!
+crypto ipsec transform-set cisco-to-forti3-set esp-aes 256 esp-sha-hmac
+!
+! CRYPTO MAP
+!
+crypto map cisco-to-forti3 1 ipsec-isakmp
+set peer 192.168.122.55
+set transform-set cisco-to-forti3-set
+match address crypto-acl
+!
+interface G0/0
+crypto map cisco-to-forti3
+!
+! CRYPTO ACL
+! Config du traffic qui doit passer dans le tunnel (source/destinbation)
+!
+ip access-list extended crypto-acl
+permit ip 10.192.0.0 0.0.255.255 192.168.100.0 0.0.0.255
+!
+! Config du traffic qui n'est pas traduit en NAT
+!
+no ip acces-list standard LANS
+ip access-list extended LANS
+5 deny ip 10.0.0.0 0.255.255.255 192.168.100.0 0.0.0.255   	
+10 permit ip 10.0.0.0 0.255.255.255 any 					 
+!
+end
+!
+wr
