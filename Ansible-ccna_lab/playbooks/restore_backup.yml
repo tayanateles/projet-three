@@ -3,7 +3,7 @@
   hosts: cisco
   gather_facts: no
   vars:
-    src_folder: "/backup"
+    src_folder: "backup/"
     src: "{{ src_folder }}/{{ inventory_hostname }}.cfg"
     dest: "{{ inventory_hostname }}.cfg"
     options: "-o StrictHostKeyChecking=no"
