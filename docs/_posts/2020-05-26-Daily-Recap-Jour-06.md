@@ -62,7 +62,6 @@ edit port1
  append allowaccess http
 edit port2
  append allowaccess http
-get system interface physical
 edit port3
  append allowaccess http
 config system dns
