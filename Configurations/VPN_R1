@@ -32,18 +32,22 @@ crypto map cisco-to-forti3
 !
 ip access-list extended crypto-acl
 permit ip 10.192.0.0 0.0.255.255 192.168.100.0 0.0.0.255
+end
 !
 ! Config du traffic qui n'est pas traduit en NAT
 !
-no ip acces-list standard LANS
+conf t
+no ip access-list standard LANS
 ip access-list extended LANS
 5 deny ip 10.0.0.0 0.255.255.255 192.168.100.0 0.0.0.255   	
 10 permit ip 10.0.0.0 0.255.255.255 any
+end
 !
+conf t
 no ip access-list extended crypto-acl
 ip access-list extended crypto-acl
- permit ip 192.168.100.0 0.0.0.255 10.0.0.0 0.255.255.255 
- permit ip 10.0.0.0 0.255.255.255 192.168.100.0 0.0.0.255
+permit ip 192.168.100.0 0.0.0.255 10.0.0.0 0.255.255.255 
+permit ip 10.0.0.0 0.255.255.255 192.168.100.0 0.0.0.255
 !
 end
 !
