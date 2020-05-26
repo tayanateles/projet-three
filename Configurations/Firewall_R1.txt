@@ -43,16 +43,28 @@ zone-pair security lan-internet source lan destination internet
 ! show zone-pair security
 ! show policy-map type insp zone-pair
 !
-! SSH
+! SSH DNS DHCP
 !
 ip access-list extended SSH
  permit tcp any any eq 22
  deny tcp any any
+ip access-list extended DHCP
+ permit udp any eq 67 any eq 68
+ permit udp any eq 68 any eq 67
+ deny udp any any
+ip access-list extended DNS
+ permit udp any any eq 53
+ permit udp any eq 53 any
+ deny udp any any
 !
 class-map type inspect match-any remote-access-class
  match access-group name SSH
 class-map type inspect match-any icmp-class
  match protocol icmp
+class-map type inspect match-any dhcp-class
+ match access-group name DHCP
+class-map type inspect match-any dns-class
+ match access-group name DNS
 ! 
 policy-map type inspect to-self-policy
  class type inspect remote-access-class
@@ -61,44 +73,22 @@ policy-map type inspect to-self-policy
   inspect
  class class-default
   drop log
+ class type inspect dhcp-class
+  pass
+ class type inspect dns-class
+  pass
 !
 zone-pair security internet-self source internet destination self
  service-policy type inspect to-self-policy
 !
-! DHCP
-!
-conf t
-ip access-list extended DHCP
- permit udp any eq 67 any eq 68
- permit udp any eq 68 any eq 67
-class-map type inspect match-any dhcp-class
- match access-group name DHCP
-policy-map type inspect to-self-policy
- class type inspect dhcp-class
-  pass
-end
-!
-! DNS
-!
-conf t
-ip access-list extended DNS
- permit udp any any eq 53
- permit udp any eq 53 any
- deny udp any any
-class-map type inspect match-any dns-class
- match access-group name DNS
-policy-map type inspect to-self-policy
- class type inspect dns-class
-  pass
-end
 wr
 !
 ! ACCES DE GESTION
 !
 !conf t
 !ip access-list standard SSH_ACCESS
-! permit ...
-! permit ...
+! permit 192.168.1.2
+! permit 192.168.122.209
 ! deny   any
 !line vty 0 4
 ! access-class SSH_ACCESS in
