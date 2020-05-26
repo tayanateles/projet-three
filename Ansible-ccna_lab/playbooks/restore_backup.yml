@@ -26,4 +26,4 @@
       ios_command:
         commands:
           - "delete /force flash:/{{ dest }}"
-      when: copy_output.rc == 0
+      when: copy_output == 0
