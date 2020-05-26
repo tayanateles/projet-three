@@ -38,7 +38,12 @@ permit ip 10.192.0.0 0.0.255.255 192.168.100.0 0.0.0.255
 no ip acces-list standard LANS
 ip access-list extended LANS
 5 deny ip 10.0.0.0 0.255.255.255 192.168.100.0 0.0.0.255   	
-10 permit ip 10.0.0.0 0.255.255.255 any 					 
+10 permit ip 10.0.0.0 0.255.255.255 any
+!
+no ip access-list extended crypto-acl
+ip access-list extended crypto-acl
+ permit ip 192.168.100.0 0.0.0.255 10.0.0.0 0.255.255.255 
+ permit ip 10.0.0.0 0.255.255.255 192.168.100.0 0.0.0.255
 !
 end
 !
@@ -47,14 +52,14 @@ wr
 ! MODIF PARE-FEU
 !
 conf t
-ip access-list extended VPN_IPSEC
+ip access-list extended ISAKMP_IPSEC
  permit udp any any eq isakmp
  permit ahp any any
  permit esp any any
  permit udp any any eq non500-isakmp
 !
 class-map type inspect match-any vpn-class
- match access-group name VPN_IPSEC
+ match access-group name ISAKMP_IPSEC
 !
 policy-map type inspect to-self-policy
  class type inspect vpn-class
