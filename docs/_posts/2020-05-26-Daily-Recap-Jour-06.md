@@ -20,7 +20,6 @@ categories: welcome
  - [x] Debug DNS
 
 ## Débriefing
-![Topologie](https://github.com/reseau-2020/projet-three/blob/master/topologie20200526.png?raw=true)
 
 ### Problèmes rencontrés
 
