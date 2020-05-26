@@ -58,7 +58,7 @@ Une première configuration en console sur fortios a été réalisée :
 configuration system interface
 edit port1		
  set mode static			
- set ip 192.168.100.254 255.255.255.0
+ set ip 192.168.100.1 255.255.255.0
  append allowaccess http
 edit port2
  append allowaccess http
