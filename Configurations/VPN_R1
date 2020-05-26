@@ -1,4 +1,5 @@
 
+conf t
 !
 crypto isakmp policy 1
 encr aes 256
@@ -34,6 +35,25 @@ ip access-list extended LANS
 5 deny ip 10.0.0.0 0.255.255.255 192.168.100.0 0.0.0.255   	
 10 permit ip 10.0.0.0 0.255.255.255 any 					 
 !
+end
+!
+wr
+!
+! MODIF PARE-FEU
+!
+conf t
+ip access-list extended VPN_IPSEC
+ permit udp any any eq isakmp
+ permit ahp any any
+ permit esp any any
+ permit udp any any eq non500-isakmp
+!
+class-map type inspect match-any vpn-class
+ match access-group name VPN_IPSEC
+!
+policy-map type inspect to-self-policy
+ class type inspect vpn-class
+  inspect
 end
 !
 wr
