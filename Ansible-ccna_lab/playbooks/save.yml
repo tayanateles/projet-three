@@ -10,6 +10,11 @@
         backup: yes
       register: config_output
       
+    - name: RENAME BACKUP
+      copy:
+        src: "{{config_output.backup_path}}"
+        dest: "./backup/{{inventory_hostname}}.config"
+      
     - name: REMOVE NON CONFIG LINES
       lineinfile:
         path: "./backup/{{inventory_hostname}}.config"
