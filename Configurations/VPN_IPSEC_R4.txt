@@ -27,7 +27,7 @@ exit
 !
 int tunnel 6
 ipv6 enable
-ipv6 address 2001:470:c814:3666::2/64
+ipv6 address 2001:470:c814:3066::2/64
 tunnel source 2001:470:c814:7006::1
 tunnel destination 2001:470:c814:3001::1
 tunnel mode ipsec ipv6
@@ -36,4 +36,4 @@ exit
 !
 ! Route Ipv6 privée
 !
-ipv6 route FD00:470:c814:3010::/64 2001:470:c814:3666::1
+ipv6 route FD00:470:c814:3010::/64 2001:470:c814:3066::1
