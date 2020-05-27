@@ -12,7 +12,7 @@
       
     - name: RENAME BACKUP
       commands: "mv ./backup/{{config_output}} ./backup/{{inventory_hostname}}.cfg"
-
+      
     - name: REMOVE NON CONFIG LINES
       lineinfile:
         path: "./backup/{{inventory_hostname}}.cfg"
