@@ -6,15 +6,15 @@ group 2
 authentication pre-share
 exit
 !
-crypto isakmp key 0 ipsecvpn address ipv6 2001:470:c814:7001::1/128
-!crypto isakmp key cisco123 address ipv6 2001:470:c814:7001::1/128
+crypto isakmp key 0 ipsecvpn address ipv6 2001:470:c814:7006::1/128
+!crypto isakmp key cisco123 address ipv6 2001:470:c814:7006::1/128
 !
 ! TRANSFORM SET
 !
 crypto ipsec transform-set ipv6_tran esp-3des esp-md5-hmac
 mode tunnel
 exit
-crypto ipsec profile ipv6_ipsec_pro ……(This transform set need to bind in VTI step4)
+crypto ipsec profile ipv6_ipsec_pro 
 set transform-set ipv6_tran
 exit
 !
@@ -22,7 +22,7 @@ exit
 !
 crypto isakmp profile 3des
 self-identity address ipv6
-match identity address ipv6 2001:470:c814:7001::1/128
+match identity address ipv6 2001:470:c814:7006::1/128
 keyring default
 exit
 !
@@ -30,13 +30,13 @@ exit
 !
 int tunnel 6
 ipv6 enable
-ipv6 address 2001:470:c814:3006::1/64
-tunnel source 2001:470:c814:3001::1/64
-tunnel destination 2001:470:c814:7001::1
+ipv6 address 2001:470:c814:3666::1/64
+tunnel source 2001:470:c814:3001::1
+tunnel destination 2001:470:c814:7006::1
 tunnel mode ipsec ipv6
 tunnel protection ipsec profile ipv6_ipsec_pro
 exit
 !
 ! Route Ipv6 privée
 !
-ipv6 route FC00:470:c814:3000::/52 2001:470:c814:3006::1
+ipv6 route FD00:470:c814:7006::/64 2001:470:c814:3666::2
