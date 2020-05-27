@@ -1,0 +1,81 @@
+!
+! CONFIGURATION GENERALE
+!
+config t
+hostname R4
+enable secret testtest
+service password-encryption
+username root secret testtest
+ip domain-name lanipv6
+crypto key generate rsa modulus 2048
+ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
+end
+wr
+!
+conf t
+ipv6 unicast-routing
+!
+! CONFIGURATION INTERFACES
+!
+interface GigabitEthernet0/1
+ no shutdown
+ ip address 192.168.200.1 255.255.255.0
+ ipv6 address FE80::6 link-local
+ ipv6 address FD00:470:c814:7006::1/64
+ ipv6 address 2001:470:c814:7006::1/64
+ ipv6 eigrp 1
+!
+interface GigabitEthernet0/0
+ no shutdown
+ ip address dhcp
+ ipv6 address FE80::cafe:7 link-local
+ ipv6 eigrp 1
+!
+ipv6 router eigrp 1
+ passive-interface GigabitEthernet0/1
+ eigrp router-id 6.6.6.6
+!
+ router eigrp 1
+ passive-interface GigabitEthernet0/0
+ eigrp router-id 6.6.6.6
+ network 192.168.200.0
+ redistribute static
+end
+wr
+!
+! CONFIGURATION NAT
+!
+conf t
+ip access-list standard lan6
+permit 192.168.200.0 0.0.0.255
+exit
+!
+ip nat inside source list lan6 interface G0/0 overload
+no ip nat inside source list lan interface G0/1 overload
+!
+int g0/1
+ip nat inside
+int g0/0
+ip nat outside
+!
+! CONFIGURATION CONNECTIVITE
+!
+ip route 192.168.200.0 255.255.255.0 192.168.122.1
+ipv6 route 2000::/3 g0/0 FE80::E53:21FF:FE38:5800
+!
+! CONFIGURATION DHCP
+!
+ip dhcp pool lan6
+network 192.168.200.0 255.255.255.0
+default-router 192.168.200.1
+dns-server 1.1.1.1
+!
+! CONFIGURATION DNS
+!
+ip domain lookup
+ip name-server 1.1.1.1
+ip dns server
+!
