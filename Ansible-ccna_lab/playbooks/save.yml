@@ -11,9 +11,7 @@
       register: config_output
       
     - name: RENAME BACKUP
-      ios_command:
-        commands:
-          - mv {{config_output.backup_path}} ./backup/{{inventory_hostname}}.cfg
+      commands: "mv {{config_output.backup_path}} ./backup/{{inventory_hostname}}.cfg"
 
     - name: REMOVE NON CONFIG LINES
       lineinfile:
