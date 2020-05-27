@@ -36,6 +36,14 @@ snmp-server enable traps
 snmp-server host 10.100.0.1 private
 end
 wr
-
+!conf t
+!ip access-list extended LAN
+!permit ip 10.100.0.0 0.0.0.255 any
+!exit
+!snmp-server view SNMP-RO iso included
+!snmp-server group ADMIN v3 priv read SNMP-RO access LAN
+!snmp-server user bob ADMIN v3 auth sha testtest priv aes 128 testest
+!snmp-server host 10.100.0.1 version 3 priv bob
+!
 ! Vérification SNMP
 ! show snmp community
