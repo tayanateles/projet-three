@@ -1,0 +1,39 @@
+conf t
+crypto isakmp policy 10
+encryption 3des
+group 2
+authentication pre-share
+exit
+crypto isakmp key 0 ipsecvpn address ipv6 2001:470:c814:3001::1/128
+!
+! TRANSFORM SET
+!
+crypto ipsec transform-set ipv6_tran esp-3des esp-md5-hmac
+mode tunnel
+exit
+crypto ipsec profile ipv6_ipsec_pro
+set transform-set ipv6_tran
+exit
+!
+! ISAKMP Ipv6 profil
+!
+crypto isakmp profile 3des
+self-identity address ipv6
+match identity address ipv6 2001:470:c814:3001::1/128
+keyring default
+exit
+!
+! Configure ipsec IPv6 VTI :
+!
+int tunnel 6
+ipv6 enable
+ipv6 address 2001:470:c814:3666::2/64
+tunnel source 2001:470:c814:7006::1
+tunnel destination 2001:470:c814:3001::1
+tunnel mode ipsec ipv6
+tunnel protection ipsec profile ipv6_ipsec_pro
+exit
+!
+! Route Ipv6 privée
+!
+ipv6 route FD00:470:c814:3010::/64 2001:470:c814:3666::1
