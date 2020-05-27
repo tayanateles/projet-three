@@ -8,7 +8,7 @@ crypto isakmp key 0 ipsecvpn address ipv6 2001:470:c814:3001::1/128
 !
 ! TRANSFORM SET
 !
-crypto ipsec transform-set ipv6_tran esp-3des esp-md5-hmac
+crypto ipsec transform-set ipv6_tran esp-3des esp-sha-hmac
 mode tunnel
 exit
 crypto ipsec profile ipv6_ipsec_pro
