@@ -42,6 +42,8 @@ end
 conf t
 zone-pair security lan-internet source lan destination internet
   service-policy type inspect internet-trafic-policy
+zone-pair security internet-lan source internet destination lan
+  service-policy type inspect internet-trafic-policy
 end
 !
 ! VERIFICATION
