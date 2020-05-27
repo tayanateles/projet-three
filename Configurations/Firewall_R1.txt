@@ -101,6 +101,8 @@ end
 conf t
 zone-pair security internet-self source internet destination self
  service-policy type inspect to-self-policy
+zone-pair security self-internet source self destination internet
+ service-policy type inspect to-self-policy
 !
 end
 wr
