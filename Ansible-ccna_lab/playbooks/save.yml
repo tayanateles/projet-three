@@ -11,7 +11,9 @@
       register: config_output
       
     - name: RENAME BACKUP
-      commands: "mv ./backup/{{config_output}} ./backup/{{inventory_hostname}}.cfg"
+      copy:
+        src: "{{config_output.backup_path}}"
+        dest: "./backup/{{inventory_hostname}}.cfg"
       
     - name: REMOVE NON CONFIG LINES
       lineinfile:
