@@ -56,18 +56,28 @@ wr
 ! MODIF PARE-FEU
 !
 conf t
-ip access-list extended VPN_IPSEC
+ip access-list extended VPN
  permit udp any any eq isakmp
  permit ahp any any
  permit esp any any
  permit udp any any eq non500-isakmp
 !
 class-map type inspect match-any vpn-class
- match access-group name VPN_IPSEC
+ match access-group name VPN
 !
 policy-map type inspect to-self-policy
  class type inspect vpn-class
   inspect
 end
+!
+!conf t
+!zone security vpn
+!interface G0/0
+! zone-member security vpn
+!end
+!conf t
+!zone-pair security vpn-lan source vpn destination lan
+!  service-policy type inspect to-self-policy
+!end
 !
 wr
