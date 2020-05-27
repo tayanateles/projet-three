@@ -1,0 +1,41 @@
+! Configuration de NTP
+
+conf t
+! Ajustement de l'heure des périphériques
+clock timezone GMT +1
+clock summer-time FR recurring last SUN MAR 02:00 last SUN OCT 02:00
+! server NTP publique sur R1 
+ntp server 3.fr.pool.ntp.org
+ntp update-calendar
+!
+! interface R1 (10.1.1.1) en tant que serveur NTP pour les autres périphériques Cisco :
+ntp server 10.1.1.1
+ntp update-calendar
+!
+!Désactiver le routage sur AS1 et AS2 et ajouter une route par défaut (l’adresse utilisée a été la passerelle du sous-réseau virtuel de gestion (VLAN99))
+no ip routing
+ip default-gateway 10.192.1.252
+
+!Vérification de NTP
+!show ntp status
+!show calendar
+!show clock
+!sh ntp config
+
+
+! Configuration Syslog
+conf t
+service timestamp log datetime
+service timestamp debug datetime
+
+
+! Configuration SNMP
+conf t
+snmp-server community private RO 
+snmp-server enable traps
+snmp-server host 10.100.0.1 private
+end
+wr
+
+!Vérification SNMP
+!show snmp community
