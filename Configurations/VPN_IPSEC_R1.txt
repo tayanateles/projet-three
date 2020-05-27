@@ -43,14 +43,32 @@ ipv6 route FD00:470:c814:7006::/64 2001:470:c814:3066::2
 !
 ! MODIFICATION PARE FEU
 !
-ip access-list extended VPN6
- permit udp any any eq 500
- permit udp any eq 500 any
- deny udp any any
+!
+zone security vpn
+interface tunnel6
+ zone-member security vpn
+ ipv6 traffic-filter vpn-acl in
+ ipv6 traffic-filter vpn-acl out
+!
+zone-pair security vpn-lan source vpn destination lan
+  service-policy type inspect to-self-policy
+zone-pair security lan-vpn source lan destination vpn
+  service-policy type inspect to-self-policy
+! 
+ipv6 access-list vpn-acl
+ permit ipv6 FD00:470:c814:7006::/64 FD00:470:c814:3010::/64
+ permit ipv6 FD00:470:c814:3010::/64 FD00:470:c814:7006::/64
+!
 class-map type inspect match-any vpn-class
  match access-group name VPN6
- no match access-group name VPN_IPSEC
-policy-map type inspect to-self-policy
- class type inspect vpn-class
-  inspect
- 
+!
+ipv6 access-list VPN6
+ permit icmp any any nd-na
+ permit icmp any any nd-ns
+ permit udp any any eq 500
+ permit udp any eq 500 any
+ permit udp any any eq isakmp
+ permit ahp any any
+ permit esp any any
+ permit udp any any eq non500-isakmp
+
