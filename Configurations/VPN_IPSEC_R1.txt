@@ -40,3 +40,17 @@ exit
 ! Route Ipv6 privée
 !
 ipv6 route FD00:470:c814:7006::/64 2001:470:c814:3066::2
+!
+! MODIFICATION PARE FEU
+!
+ip access-list extended VPN6
+ permit udp any any eq 500
+ permit udp any eq 500 any
+ deny udp any any
+class-map type inspect match-any vpn-class
+ match access-group name VPN6
+ no match access-group name VPN_IPSEC
+policy-map type inspect to-self-policy
+ class type inspect vpn-class
+  inspect
+ 
