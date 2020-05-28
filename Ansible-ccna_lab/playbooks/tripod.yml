@@ -3,7 +3,7 @@
 - hosts: core
   gather_facts: False
   roles:
-    - role: ios_common
+#    - role: ios_common
     - role: ios_interface
     - role: ios_ipv4
     - role: ios_ipv6
