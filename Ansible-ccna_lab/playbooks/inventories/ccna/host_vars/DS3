@@ -239,7 +239,7 @@ interfaces:
     description: "Stub interface"
     stub: true
 routing:
-  rid: 6.6.6.6
+  rid: 8.8.8.8
   eigrp_as: 1
   fhrp:
     - id: Vlan10
