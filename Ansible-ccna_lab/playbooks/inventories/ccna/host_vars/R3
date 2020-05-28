@@ -102,7 +102,7 @@ interfaces:
 #
 #Deuxieme switchblock
 #
-- id: GigabitEthernet0/8
+  - id: GigabitEthernet0/8
     description: "Link to DS3"
     ipv4_address: 10.3.5.1/24
     rip:
