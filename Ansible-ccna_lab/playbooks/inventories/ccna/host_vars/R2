@@ -99,59 +99,6 @@ interfaces:
     ipv6_addresses:
       - 'FE80::2'
     eigrp6:
-#
-#Deuxieme switchblock
-#
- - id: GigabitEthernet0/8
-    description: "Link to DS3 on port 2/0"
-    ipv4_address: 10.2.5.1/24
-    rip:
-    eigrp4:
-    ospfv2:
-      area: 0
-      cost: 1
-      pri: 255
-    ipv6_addresses:
-      - 'FE80::2'
-    eigrp6:
-  - id: GigabitEthernet0/9
-    description: "Link to DS3 on port 3/0"
-    ipv4_address: 10.2.6.1/24
-    rip:
-    eigrp4:
-    ospfv2:
-      area: 0
-      cost: 1
-      pri: 255
-    ipv6_addresses:
-      - 'FE80::2'
-    eigrp6:
-  - id: GigabitEthernet0/10
-    description: "Link to DS4 on port 2/1"
-    ipv4_address: 10.2.7.1/24
-    rip:
-    eigrp4:
-    ospfv2:
-      area: 0
-      cost: 1
-      pri: 255
-    ipv6_addresses:
-      - 'FE80::2'
-    eigrp6:
-  - id: GigabitEthernet0/11
-    description: "Link to DS4 on port 3/1"
-    ipv4_address: 10.2.8.1/24
-    rip:
-    eigrp4:
-    ospfv2:
-      area: 0
-      cost: 1
-      pri: 255
-    ipv6_addresses:
-      - 'FE80::2'
-    eigrp6:
-#
-#
 routing:
   rid: 2.2.2.2
   eigrp_as: 1
