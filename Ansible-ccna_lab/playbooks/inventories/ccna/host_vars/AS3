@@ -30,8 +30,8 @@ interfaces:
       vlan: 40
   - id: Vlan99
     description: "Management interface"
-    ipv4_address: 10.192.1.3/24
-    gateway: 10.192.1.254
+    ipv4_address: 10.193.1.3/24
+    gateway: 10.192.3.254
   - id: GigabitEthernet0/0
     description: "Trunk Group Channel1 to DS3"
     trunk:
