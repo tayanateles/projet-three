@@ -5,7 +5,7 @@ interfaces:
     description: "Internet connexion ip nat outside"
     ipv4_address: dhcp
     ipv6_addresses:
-      - 'fe80::cafe:31'
+      - 'fe80::cafe:3'
   - id: GigabitEthernet0/2
     description: "Link to R2"
     ipv4_address: 10.1.1.1/24
