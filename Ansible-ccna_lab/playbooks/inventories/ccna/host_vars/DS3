@@ -66,7 +66,7 @@ interfaces:
       native: 99
   - id: Vlan99
     description: "Management real gateway"
-    ipv4_address: 10.192.1.250/24
+    ipv4_address: 10.193.1.250/24
     passive:
     rip:
     eigrp4:
@@ -81,7 +81,7 @@ interfaces:
       pri: 255
   - id: Vlan10
     description: "Vlan10 real gateway"
-    ipv4_address: 10.192.10.250/24
+    ipv4_address: 10.193.10.250/24
     passive:
     rip:
     eigrp4:
@@ -100,7 +100,7 @@ interfaces:
       pri: 255
   - id: Vlan20
     description: "Vlan20 real gateway"
-    ipv4_address: 10.192.20.250/24
+    ipv4_address: 10.193.20.250/24
     passive:
     rip:
     eigrp4:
@@ -119,7 +119,7 @@ interfaces:
       pri: 255
   - id: Vlan30
     description: "Vlan30 real gateway"
-    ipv4_address: 10.192.30.250/24
+    ipv4_address: 10.193.30.250/24
     passive:
     rip:
     eigrp4:
@@ -138,7 +138,7 @@ interfaces:
       pri: 255
   - id: Vlan40
     description: "Vlan40 real gateway"
-    ipv4_address: 10.192.40.250/24
+    ipv4_address: 10.193.40.250/24
     passive:
     rip:
     eigrp4:
@@ -245,27 +245,27 @@ routing:
     - id: Vlan10
       group: 10
       protocol: ipv4
-      address: 10.192.10.254
+      address: 10.193.10.254
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan20
       group: 20
       protocol: ipv4
-      address: 10.192.20.254
+      address: 10.193.20.254
       preempt: false
       mode: standby
     - id: Vlan30
       group: 30
       protocol: ipv4
-      address: 10.192.30.254
+      address: 10.193.30.254
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan40
       group: 40
       protocol: ipv4
-      address: 10.192.40.254
+      address: 10.193.40.254
       preempt: false
       mode: standby
     - id: Vlan10
@@ -297,39 +297,39 @@ routing:
 dhcp:
   dhcp_pool:
     - id: "VLAN10"
-      network: 10.192.10.0
+      network: 10.193.10.0
       netmask: 255.255.255.0
-      router: 10.192.10.254
+      router: 10.193.10.254
       dns: 1.1.1.1
     - id: "VLAN20"
-      network: 10.192.20.0
+      network: 10.193.20.0
       netmask: 255.255.255.0
-      router: 10.192.20.254
+      router: 10.193.20.254
       dns: 1.1.1.1
     - id: "VLAN30"
-      network: 10.192.30.0
+      network: 10.193.30.0
       netmask: 255.255.255.0
-      router: 10.192.30.254
+      router: 10.193.30.254
       dns: 1.1.1.1
     - id: "VLAN40"
-      network: 10.192.40.0
+      network: 10.193.40.0
       netmask: 255.255.255.0
-      router: 10.192.40.254
+      router: 10.193.40.254
       dns: 1.1.1.1
   dhcp_excluded:
-    - start: 10.192.10.1
-      end: 10.192.10.100
-    - start: 172.16.10.151
-      end: 10.192.10.255
-    - start: 10.192.20.1
-      end: 10.192.20.100
-    - start: 10.192.20.151
-      end: 10.192.20.255
-    - start: 10.192.30.1
-      end: 10.192.30.100
-    - start: 10.192.30.151
-      end: 10.192.30.255
-    - start: 10.192.40.1
-      end: 10.192.40.100
-    - start: 10.192.40.151
-      end: 10.192.40.255
+    - start: 10.193.10.1
+      end: 10.193.10.100
+    - start: 10.193.10.151
+      end: 10.193.10.255
+    - start: 10.193.20.1
+      end: 10.193.20.100
+    - start: 10.193.20.151
+      end: 10.193.20.255
+    - start: 10.193.30.1
+      end: 10.193.30.100
+    - start: 10.193.30.151
+      end: 10.193.30.255
+    - start: 10.193.40.1
+      end: 10.193.40.100
+    - start: 10.193.40.151
+      end: 10.193.40.255
