@@ -271,27 +271,27 @@ routing:
     - id: Vlan10
       group: 16
       protocol: ipv6
-      address: 'FE80::D0'
+      address: 'FE80::D193'
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan20
       group: 26
       protocol: ipv6
-      address: 'FE80::D0'
+      address: 'FE80::D193'
       preempt: false
       mode: standby
     - id: Vlan30
       group: 36
       protocol: ipv6
-      address: 'FE80::D0'
+      address: 'FE80::D193'
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan40
       group: 46
       protocol: ipv6
-      address: 'FE80::D0'
+      address: 'FE80::D193'
       preempt: false
       mode: standby
 dhcp:
